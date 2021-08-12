@@ -1,0 +1,34 @@
+h1 {
+    float: left;
+    width: 350px;
+    font-family: Helvetica, sans-serif;
+    font-size: 50px;
+    letter-spacing: -1px;
+    margin-left: 20px;
+}
+
+#nba_logo {
+    float: left;
+    width: 60px;
+    height: 133px;
+    margin-left: 20px;
+}
+
+#page_header {
+    width: 100%;
+    height: 125px;
+}
+
+hr {
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+#player_label {
+    font-family: 'PT Serif Caption', serif;
+    margin-left: 10px;
+}
+
+#player_input {
+    margin-left: 10px;
+}
