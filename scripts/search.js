@@ -1,3 +1,6 @@
+var input_field = document.getElementById("player_input");
+var search_button = document.getElementById("search_button");
+
 // empty nba_player object
 var nba_player = {
     "name" : "",
@@ -17,18 +20,16 @@ var nba_league = {
 
 };
 
-function getPlayer() {
-    fetch("https://free-nba.p.rapidapi.com/players?search=davis&per_page=25&page=0", {
+function getPlayer(search_term) {
+    fetch(`https://free-nba.p.rapidapi.com/players?search=${search_term}&per_page=25&page=0`, {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-key": "3683bd61dfmshd234785dbb9d5bep1253d9jsn5a556f7f2e21",
 		"x-rapidapi-host": "free-nba.p.rapidapi.com"
 	}
     })
-    .then(response => {
-        console.log(response);
-        // get into & parse this response -  have to fulfill 1 more promise (resolve the response)?
-    })
+    .then(response => response.json())
+    .then(responseJSON => console.log(responseJSON))
     .catch(err => {
 	    console.error(err);
     });
@@ -36,6 +37,12 @@ function getPlayer() {
 
 function getPlayerStats() {
     console.log();
+    // do another fetch here of stats part of api
 }
 
-getPlayer();
+search_button.addEventListener('click', () => {
+    var player_name = input_field.value;
+    // DO INPUT VALIDATION HERE... OR WHEN USER CLICKS OUT OF INPUT FIELD?? STRAT?
+    console.log(`Search Term: ${player_name}`);
+    getPlayer(player_name);
+});
