@@ -15,10 +15,10 @@
         <link rel="stylesheet" type="text/css" href="styles/style.css">
     </head>
     <body>
-        <header id="page_header">
-            <img id="nba_logo" src="images/nba_logo.png" alt="NBA Logo">
-            <h1>NBA Database</h1>
-        </header>
+        <?php
+            // include the header
+            include('includes/header.php');
+        ?>
         <hr>
         <label id="player_label" for="player_in">Search Player:</label>
         <input id="player_input" type="text" name="player_in">

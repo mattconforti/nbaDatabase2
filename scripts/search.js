@@ -46,3 +46,12 @@ search_button.addEventListener('click', () => {
     console.log(`Search Term: ${player_name}`);
     getPlayer(player_name);
 });
+
+// make 'enter' key trigger search button
+document.addEventListener('keyup', e => {
+    if (e.key === 'Enter') {
+        e.preventDefault();  // prevent default behavior
+        search_button.click();  // trigger button click
+        // BUTTON CLICK HOVER & ANIMATION DOESNT HAPPEN... MAKE IT HAPPEN FOR UX
+    }
+});
