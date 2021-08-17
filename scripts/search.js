@@ -44,7 +44,10 @@ search_button.addEventListener('click', () => {
     var player_name = input_field.value;
     // DO INPUT VALIDATION HERE... OR WHEN USER CLICKS OUT OF INPUT FIELD?? STRAT?
     console.log(`Search Term: ${player_name}`);
+    // API call
     getPlayer(player_name);
+    // open window with populated player stats from API
+    window.open('html/player_page.php', '_blank');
 });
 
 // make 'enter' key trigger search button

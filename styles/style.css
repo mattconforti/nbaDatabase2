@@ -38,3 +38,15 @@ hr {
     margin-left: 3px;
     /* MAKE THIS AN ICON BUTTON WITH MAGNIFYING GLASS LOGO */
 }
+
+#grid_container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 150px 150px 150px;
+    padding: 10px;
+    border: 2px solid red;
+}
+
+.grid_item {
+    border: 2px solid black;
+}
