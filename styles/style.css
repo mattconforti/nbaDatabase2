@@ -42,11 +42,45 @@ hr {
 #grid_container {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    grid-template-rows: 150px 150px 150px;
+    grid-template-rows: 250px 150px 150px;
     padding: 10px;
-    border: 2px solid red;
+    gap: 20px;
 }
 
 .grid_item {
     border: 2px solid black;
+}
+
+#player_item {
+    grid-column-start: span 2;
+}
+
+#player_photo {
+    display: block;
+    width: 300px;
+    height: 218px;
+    /* MAKE EVERYTHING BIGGER? INCLUDING FONTS ETC! */
+    margin: auto;
+}
+
+#season_stats {
+    grid-row-start: span 2;
+    text-align: center;
+}
+
+#career_stats {
+    text-align: center;
+}
+
+#career_accolades {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.stats_dividers {
+    margin-top: 5px;
 }
