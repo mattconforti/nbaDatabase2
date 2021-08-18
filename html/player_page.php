@@ -20,17 +20,20 @@
         <hr>
         <!-- grid here -->
         <div id="grid_container">
-            <div class="grid_item">
+            <div id="player_item" class="grid_item">
+                <img id="player_photo" src="../images/player_photo.png" alt="player headshot">
             </div>
-            <div class="grid_item">
+            <div id="season_stats" class="grid_item">
+                <h2>Season Stats</h2>
+                <hr class="stats_dividers">
             </div>
-            <div class="grid_item">
+            <div id="career_stats" class="grid_item">
+                <h2>Career Stats</h2>
+                <hr class="stats_dividers">
             </div>
-            <div class="grid_item">
-            </div>
-            <div class="grid_item">
-            </div>
-            <div class="grid_item">
+            <div id="career_accolades" class="grid_item">
+                <h2>Career Accolades</h2>
+                <hr class="stats_dividers">
             </div>
         </div>
     </body>
