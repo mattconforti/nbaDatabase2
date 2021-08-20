@@ -77,10 +77,23 @@ hr {
 }
 
 h2 {
+    width: 100%;
     margin-top: 5px;
     margin-bottom: 0px;
 }
 
 .stats_dividers {
     margin-top: 5px;
+}
+
+#subgrid_container {
+    border: 2px solid red;
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+    grid-template-rows: 45px 45px 45px 45px 45px 45px 45px;
+    /* however many seasons player played determines # of rows - min 2 */
+}
+
+.subgrid_item {
+    border: 1px solid black;
 }
