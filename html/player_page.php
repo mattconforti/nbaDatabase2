@@ -26,6 +26,37 @@
             <div id="season_stats" class="grid_item">
                 <h2>Season Stats</h2>
                 <hr class="stats_dividers">
+                <div id="subgrid_container">
+                    <div class="subgrid_item">
+                        <h3>Season:</h3>
+                    </div>
+                    <div class="subgrid_item">
+                    </div>
+                    <div class="subgrid_item">
+                    </div>
+                    <div class="subgrid_item">
+                    </div>
+                    <div class="subgrid_item">
+                    </div>
+                    <div class="subgrid_item">
+                    </div>
+                    <div class="subgrid_item">
+                    </div>
+                    <div class="subgrid_item">
+                    </div>
+                    <div class="subgrid_item">
+                    </div>
+                    <div class="subgrid_item">
+                    </div>
+                    <div class="subgrid_item">
+                    </div>
+                    <div class="subgrid_item">
+                    </div>
+                    <div class="subgrid_item">
+                    </div>
+                    <div class="subgrid_item">
+                    </div>
+                </div>
             </div>
             <div id="career_stats" class="grid_item">
                 <h2>Career Stats</h2>
