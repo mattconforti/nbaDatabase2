@@ -31,18 +31,26 @@
                         <h3>Season:</h3>
                     </div>
                     <div class="subgrid_item">
+                        <h3>PTS</h3>
                     </div>
                     <div class="subgrid_item">
+                        <h3>MIN</h3>
                     </div>
                     <div class="subgrid_item">
+                        <h3>AST</h3>
                     </div>
                     <div class="subgrid_item">
+                        <h3>REB</h3>
+                    </div>
+
+                    <div class="subgrid_item">
+                        <h3>FG%</h3>
                     </div>
                     <div class="subgrid_item">
+                        <h3>3P%</h3>
                     </div>
                     <div class="subgrid_item">
-                    </div>
-                    <div class="subgrid_item">
+                        <h3>'20-'21</h3>
                     </div>
                     <div class="subgrid_item">
                     </div>
@@ -64,7 +72,10 @@
             </div>
             <div id="career_accolades" class="grid_item">
                 <h2>Career Accolades</h2>
-                <hr class="stats_dividers">
+                <hr id="accolades_divider" class="stats_dividers">
+                <h3 id="mvp_awards">MVP</h3>
+                <h3>ALL STAR</h3>
+                <h3>DPOY</h3>
             </div>
         </div>
     </body>
