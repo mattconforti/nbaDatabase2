@@ -86,14 +86,27 @@ h2 {
     margin-top: 5px;
 }
 
+#accolades_divider {
+    margin-bottom: 0px;
+}
+
 #subgrid_container {
     border: 2px solid red;
     display: grid;
-    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
-    grid-template-rows: 45px 45px 45px 45px 45px 45px 45px;
+    grid-template-columns: 90px 75px 75px 75px 75px 75px 75px;
+    grid-template-rows: 35px 35px 35px 35px 35px 35px 35px;
     /* however many seasons player played determines # of rows - min 2 */
 }
 
 .subgrid_item {
     border: 1px solid black;
+}
+
+h3 {
+    margin-top: 6px;
+    /* STILL HAVE TO CLEAN UP CENTERING & SPACING & SIZING & FONTS/AESTHETICS ETC */
+}
+
+#mvp_awards {
+    margin-top: 5px;
 }
