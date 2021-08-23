@@ -21,7 +21,13 @@
         <!-- grid here -->
         <div id="grid_container">
             <div id="player_item" class="grid_item">
+                <!-- need to make photo section & 2 info sections surrounding --> 
+                <!-- & style them as 3 boxes stacked horizontally next to eachother with gap -->
                 <img id="player_photo" src="../images/player_photo.png" alt="player headshot">
+                <h2 class="player_info">36 y/o</h2>
+                <h2 class="player_info">6'9"</h2>
+                <h2 class="player_info">SF</h2>
+                <h2></h2>
             </div>
             <div id="season_stats" class="grid_item">
                 <h2>Season Stats</h2>
@@ -69,6 +75,44 @@
             <div id="career_stats" class="grid_item">
                 <h2>Career Stats</h2>
                 <hr class="stats_dividers">
+                <div id="subgrid2">
+                    <div class="subgrid2_item">
+                        <h3>Season:</h3>
+                    </div>
+                    <div class="subgrid2_item">
+                        <h3>PTS</h3>
+                    </div>
+                    <div class="subgrid2_item">
+                        <h3>MIN</h3>
+                    </div>
+                    <div class="subgrid2_item">
+                        <h3>AST</h3>
+                    </div>
+                    <div class="subgrid2_item">
+                        <h3>REB</h3>
+                    </div>
+                    <div class="subgrid2_item">
+                        <h3>FG%</h3>
+                    </div>
+                    <div class="subgrid2_item">
+                        <h3>3P%</h3>
+                    </div>
+                    <div class="subgrid2_item">
+                        <h3>Career</h3>
+                    </div>
+                    <div class="subgrid2_item">
+                    </div>
+                    <div class="subgrid2_item">
+                    </div>
+                    <div class="subgrid2_item">
+                    </div>
+                    <div class="subgrid2_item">
+                    </div>
+                    <div class="subgrid2_item">
+                    </div>
+                    <div class="subgrid2_item">
+                    </div>
+                </div>
             </div>
             <div id="career_accolades" class="grid_item">
                 <h2>Career Accolades</h2>
