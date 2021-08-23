@@ -66,10 +66,12 @@ hr {
 #season_stats {
     grid-row-start: span 2;
     text-align: center;
+    margin-top: 40px;
 }
 
 #career_stats {
     text-align: center;
+    margin-top: 40px;
 }
 
 #career_accolades {
@@ -84,6 +86,7 @@ h2 {
 
 .stats_dividers {
     margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 #accolades_divider {
@@ -91,11 +94,11 @@ h2 {
 }
 
 #subgrid_container {
-    border: 2px solid red;
     display: grid;
     grid-template-columns: 90px 75px 75px 75px 75px 75px 75px;
     grid-template-rows: 35px 35px 35px 35px 35px 35px 35px;
     /* however many seasons player played determines # of rows - min 2 */
+    margin-top: 0px;
 }
 
 .subgrid_item {
@@ -109,4 +112,14 @@ h3 {
 
 #mvp_awards {
     margin-top: 5px;
+}
+
+#subgrid2 {
+    display: grid;
+    grid-template-columns: 90px 75px 75px 75px 75px 75px 75px;
+    grid-template-rows: 35px 35px;
+}
+
+.subgrid2_item {
+    border: 1px solid black;
 }
