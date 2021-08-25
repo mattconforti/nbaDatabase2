@@ -55,12 +55,38 @@ hr {
     grid-column-start: span 2;
 }
 
+#subgrid_container {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: 300px;
+    margin-left: 15%;
+    /* align perfectly ^^ */
+}
+
+#player_info_item {
+    text-align: center;
+}
+
+.player_info {
+    /* make into a flexbox(or 1 col grid) & have it not move.
+       center items in container & make rows of text evenly spaced
+    */
+    font-size: 1.75em;
+    /* use consistent units throughout this project - max of like 3 maybe?? idk */
+    /* MESS WITH SIZING & SPACING OF EVERYTHING!!! MAKE IMAGES & FONTS BIGGER & 
+       THINGS SPACED OUT NICELY!
+    */
+}
+
+#team_logo {
+    width: 250px;
+    height: 250px;
+}
+
 #player_photo {
-    display: block;
     width: 300px;
     height: 218px;
     /* MAKE EVERYTHING BIGGER? INCLUDING FONTS ETC! */
-    margin: auto;
 }
 
 #season_stats {
@@ -93,7 +119,7 @@ h2 {
     margin-bottom: 0px;
 }
 
-#subgrid_container {
+#subgrid_container2 {
     display: grid;
     grid-template-columns: 90px 75px 75px 75px 75px 75px 75px;
     grid-template-rows: 35px 35px 35px 35px 35px 35px 35px;
@@ -101,7 +127,7 @@ h2 {
     margin-top: 0px;
 }
 
-.subgrid_item {
+.subgrid2_item {
     border: 1px solid black;
 }
 
@@ -114,12 +140,12 @@ h3 {
     margin-top: 5px;
 }
 
-#subgrid2 {
+#subgrid3 {
     display: grid;
     grid-template-columns: 90px 75px 75px 75px 75px 75px 75px;
     grid-template-rows: 35px 35px;
 }
 
-.subgrid2_item {
+.subgrid3_item {
     border: 1px solid black;
 }
