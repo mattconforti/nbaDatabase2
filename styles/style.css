@@ -64,7 +64,15 @@ hr {
 }
 
 #player_info_item {
-    text-align: center;
+    display: grid;
+    grid-template-columns: 100px;
+    grid-template-rows: repeat(3,50px);
+    border: 2px solid red;
+    justify-items: center;
+}
+
+.nested_subgrid_item {
+    border: 2px solid red;
 }
 
 .player_info {
