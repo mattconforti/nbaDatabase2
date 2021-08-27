@@ -29,7 +29,10 @@ function getPlayer(search_term) {
 	}
     })
     .then(response => response.json())
-    .then(responseJSON => console.log(responseJSON))
+    .then(responseJSON => {
+        console.log(responseJSON['data']);
+
+    })
     .catch(err => {
 	    console.error(err);
     });
