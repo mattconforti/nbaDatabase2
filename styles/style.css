@@ -70,11 +70,22 @@ hr {
     justify-content: center;
     align-content: center;
     height: 250px;
+    border: 2px solid red;
     /* fix margin left??? doesnt align with the other items in the grid?? */
+}
+
+.player_info_label {
+    margin-bottom: 10px;
+    margin-top: 5px;
+    /* WHY ARE THESE ACTING LIKE THEY ARE IN FIXED POSITION? OVERLAPPING OTHER H2s???? 
+       bc h2 rules below?? gotta make sure thats why. i think thats true bc thats how
+       css works!!!
+    */
 }
 
 .player_info {
     font-size: 1.75em;
+    border: 2px solid green;
     /* use consistent units throughout this project - max of like 3 maybe?? idk */
     /* MESS WITH SIZING & SPACING OF EVERYTHING!!! MAKE IMAGES & FONTS BIGGER & 
        THINGS SPACED OUT NICELY!
