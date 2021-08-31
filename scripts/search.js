@@ -37,15 +37,28 @@ function getPlayer(search_term) {
         */
        let player_id = responseJSON["data"][0]["id"];
        console.log(player_id);
+       getStats(player_id);  // get stats for specific player
     })
     .catch(err => {
 	    console.error(err);
     });
 }
 
-function getPlayerStats() {
-    console.log();
-    // do another fetch here of stats part of api
+function getStats(playerId) {
+    fetch(`https://free-nba.p.rapidapi.com/stats?player_ids=${playerId}&per_page=25&page=0`, {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "free-nba.p.rapidapi.com",
+		"x-rapidapi-key": "3683bd61dfmshd234785dbb9d5bep1253d9jsn5a556f7f2e21"
+	}
+    })
+    .then(r => r.json())
+    .then(rJSON => {
+        console.log(rJSON);
+    })
+    .catch(err => {
+	    console.error(err);
+    });
 }
 
 search_button.addEventListener('click', () => {
