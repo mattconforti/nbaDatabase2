@@ -65,20 +65,15 @@ hr {
 
 #player_info_item {
     display: grid;
-    grid-template-columns: 100px;
+    grid-template-columns: 200px;
     grid-template-rows: repeat(3,50px);
-    border: 2px solid red;
-    justify-items: center;
-}
-
-.nested_subgrid_item {
-    border: 2px solid red;
+    justify-content: center;
+    align-content: center;
+    height: 250px;
+    /* fix margin left??? doesnt align with the other items in the grid?? */
 }
 
 .player_info {
-    /* make into a flexbox(or 1 col grid) & have it not move.
-       center items in container & make rows of text evenly spaced
-    */
     font-size: 1.75em;
     /* use consistent units throughout this project - max of like 3 maybe?? idk */
     /* MESS WITH SIZING & SPACING OF EVERYTHING!!! MAKE IMAGES & FONTS BIGGER & 
