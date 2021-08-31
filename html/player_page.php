@@ -32,13 +32,13 @@
                     <div id="player_info_item" class="subgrid_item">
                     <!-- also a nested subgrid ^^ -->
                         <div class="nested_subgrid_item">
-                            <h2 class="player_info">36 y/o</h2>
+                            <h2 class="player_info">Age: 36 y/o</h2>
                         </div>
                         <div class="nested_subgrid_item">
-                            <h2 class="player_info">6'9"</h2>
+                            <h2 class="player_info">Height: 6'9"</h2>
                         </div>
                         <div class="nested_subgrid_item">
-                            <h2 class="player_info">SF</h2>
+                            <h2 class="player_info">Position: SF</h2>
                         </div>
                     </div>
                 </div>

@@ -30,8 +30,13 @@ function getPlayer(search_term) {
     })
     .then(response => response.json())
     .then(responseJSON => {
-        console.log(responseJSON['data']);
-
+        console.log(responseJSON);
+        /* have to store playerid = use that in another fetch to get stats!!
+           make a function getStats(playerId) that does another api call & gets called here. returns
+           object full of the stats data
+        */
+       let player_id = responseJSON["data"][0]["id"];
+       console.log(player_id);
     })
     .catch(err => {
 	    console.error(err);
