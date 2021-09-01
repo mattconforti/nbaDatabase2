@@ -33,24 +33,41 @@ function getPlayer(search_term) {
        blog on best api for each topic. ex. best food api, best nba api etc. rate for accuracy & information
        avaiable, ease of use & getting that info thru api call (do we have to search for playerid 
        or game # first??... etc.
+
+       - from rapid api: API-NBA, Free NBA, NBA Stats, Basketball Data, Real-Time
+         Basketball Content, JsonOdds for sports betting - would be a cool little different side project
+         gunna end up going with "NBA Player Individual Stats" on rapidapi - has everything i need including
+         player info, season and career stats, player headshot url, etc. updated a day ago. Perfect API for this project!
+         only problem is, api querys go by either first name or last name. not both. i commented a post to the creator
+         about this asking for full name queries. until then i will search by last name & parse thru the results to find
+         desired player
     */
-    fetch(`https://free-nba.p.rapidapi.com/players?search=${search_term}&per_page=25&page=0`, {
+   let names = search_term.split(' ');
+   fetch(`https://nba-player-individual-stats.p.rapidapi.com/players/lastname?lastname=${names[1]}`, {
 	"method": "GET",
 	"headers": {
-		"x-rapidapi-key": "3683bd61dfmshd234785dbb9d5bep1253d9jsn5a556f7f2e21",
-		"x-rapidapi-host": "free-nba.p.rapidapi.com"
+		"x-rapidapi-host": "nba-player-individual-stats.p.rapidapi.com",
+		"x-rapidapi-key": "3683bd61dfmshd234785dbb9d5bep1253d9jsn5a556f7f2e21"
 	}
-    })
+    })  
     .then(response => response.json())
     .then(responseJSON => {
         console.log(responseJSON);
+
+        // loop thru results & match first name (names[0])
+        for (let counter = 0; counter < responseJSON.length; counter++) {
+            console.log(responseJSON[counter]);
+            if (responseJSON[counter]["firstName"] === names[0]) {
+                console.log("match");
+                // this is the one we want to parse thru further & extract info from
+            }
+        }
+
         /* have to store playerid = use that in another fetch to get stats!!
            make a function getStats(playerId) that does another api call & gets called here. returns
            object full of the stats data
         */
-       let player_id = responseJSON["data"][0]["id"];
-       console.log(player_id);
-       getStats(player_id);  // get stats for specific player. make it return & store obj
+       // get stats for specific player. make it return & store obj
        /* populate and return nba player object. pass that into a function that
           displays properties of that object etc on corresponding page
           (player or team page etc)
