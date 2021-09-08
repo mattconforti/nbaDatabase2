@@ -33,15 +33,21 @@
                     <!-- also a nested subgrid ^^ -->
                         <div class="nested_subgrid_item">
                             <h2 class="player_info_label">Age:</h2>
-                            <h2 class="player_info">36 y/o</h2>
+                        </div>
+                        <div class="nested_subgrid_item">
+                            <h2 class="player_info"></h2>
                         </div>
                         <div class="nested_subgrid_item">
                             <h2 class="player_info_label">Height:</h2>
-                            <h2 class="player_info">6'9"</h2>
+                        </div>
+                        <div class="nested_subgrid_item">
+                            <h2 class="player_info"></h2>
                         </div>
                         <div class="nested_subgrid_item">
                             <h2 class="player_info_label">Position:</h2>
-                            <h2 class="player_info">SF</h2>
+                        </div>
+                        <div class="nested_subgrid_item">
+                            <h2 class="player_info"></h2>
                         </div>
                     </div>
                 </div>

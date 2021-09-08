@@ -65,12 +65,11 @@ hr {
 
 #player_info_item {
     display: grid;
-    grid-template-columns: 200px;
+    grid-template-columns: 100px 100px;
     grid-template-rows: repeat(3,50px);
     justify-content: center;
     align-content: center;
     height: 250px;
-    border: 2px solid red;
     /* fix margin left??? doesnt align with the other items in the grid?? */
 }
 
@@ -85,7 +84,6 @@ hr {
 
 .player_info {
     font-size: 1.75em;
-    border: 2px solid green;
     /* use consistent units throughout this project - max of like 3 maybe?? idk */
     /* MESS WITH SIZING & SPACING OF EVERYTHING!!! MAKE IMAGES & FONTS BIGGER & 
        THINGS SPACED OUT NICELY!

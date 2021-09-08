@@ -8,6 +8,7 @@ var nba_player = {
     "position" : ""
     // NEED MORE & STUFF PUT INTO CATEGORIES
     // THEN A BUNCH OF THESE PLAYER OBJECTS WILL DEFINE A TEAM OBJECT
+    // DO I REALLY NEED THIS FORMATTED THE WAY I WANT? API results contain an obj just like this!!
 }
 
 // empty nba_team object
@@ -48,7 +49,7 @@ function getPlayer(search_term) {
    // the code that checks this needs to check against all lowercase first names - last names need to be first letter
    // capitals for the api query term
 
-
+   // they changed the program to make an endpoint that searches by full name. after a comment i made to the 
    fetch(`https://nba-player-individual-stats.p.rapidapi.com/players/lastname?lastname=${names[1]}`, {
 	"method": "GET",
 	"headers": {
@@ -69,6 +70,12 @@ function getPlayer(search_term) {
                 // get all info needed & open window to display data
                 var player_img_url = responseJSON[counter]["headShotUrl"];
                 console.log(player_img_url);
+
+                // get team with designated function & grab team photo for display
+                var player_team = responseJSON[counter]["team"];
+                console.log("API call for: " + player_team);
+                getTeam(player_team);
+
 
                 // open player_window
                 var player_window = window.open('html/player_page.php', '_blank');
@@ -96,6 +103,10 @@ function getPlayer(search_term) {
     });
 }
 
+function getTeam(team_name) {
+    
+}
+
 function getStats(playerId) {
     fetch(`https://free-nba.p.rapidapi.com/stats?player_ids=${playerId}&per_page=25&page=0`, {
 	"method": "GET",
@@ -114,7 +125,6 @@ function getStats(playerId) {
 }
 
 function displayStats(stats, opened_window) {
-    console.log(stats);
     opened_window.document.getElementById("player_photo").src = stats;
     console.log(opened_window.document.getElementById("player_photo").src);
 }
