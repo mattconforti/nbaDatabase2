@@ -27,7 +27,7 @@
                         <img id="team_logo" src="../images/lakers_logo.png" alt="logo of player's team">
                     </div>
                     <div id="player_photo_item" class="subgrid_item">
-                        <img id="player_photo" src="../images/player_photo.png" alt="player headshot">
+                        <img id="player_photo" src="" alt="player headshot">
                     </div>
                     <div id="player_info_item" class="subgrid_item">
                     <!-- also a nested subgrid ^^ -->
