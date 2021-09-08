@@ -42,14 +42,20 @@ function getPlayer(search_term) {
          about this asking for full name queries. until then i will search by last name & parse thru the results to find
          desired player
     */
+   // fix indent - only 3 spaces below
    let names = search_term.split(' ');
+   // make sure names are first letter uppercase - problem is someone like Lamelo Ball is listed as LaMelo in the db
+   // the code that checks this needs to check against all lowercase first names - last names need to be first letter
+   // capitals for the api query term
+
+
    fetch(`https://nba-player-individual-stats.p.rapidapi.com/players/lastname?lastname=${names[1]}`, {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "nba-player-individual-stats.p.rapidapi.com",
 		"x-rapidapi-key": "3683bd61dfmshd234785dbb9d5bep1253d9jsn5a556f7f2e21"
 	}
-    })  
+    })
     .then(response => response.json())
     .then(responseJSON => {
         console.log(responseJSON);
@@ -57,9 +63,21 @@ function getPlayer(search_term) {
         // loop thru results & match first name (names[0])
         for (let counter = 0; counter < responseJSON.length; counter++) {
             console.log(responseJSON[counter]);
+            // match first name with user input
             if (responseJSON[counter]["firstName"] === names[0]) {
                 console.log("match");
-                // this is the one we want to parse thru further & extract info from
+                // get all info needed & open window to display data
+                var player_img_url = responseJSON[counter]["headShotUrl"];
+                console.log(player_img_url);
+
+                // open player_window
+                var player_window = window.open('html/player_page.php', '_blank');
+
+                // wait for the window to load before inserting new content
+                player_window.onload = function() {
+                    console.log(player_window.document);
+                    displayStats(player_img_url, player_window);
+                };
             }
         }
 
@@ -95,14 +113,19 @@ function getStats(playerId) {
     });
 }
 
+function displayStats(stats, opened_window) {
+    console.log(stats);
+    opened_window.document.getElementById("player_photo").src = stats;
+    console.log(opened_window.document.getElementById("player_photo").src);
+}
+
 search_button.addEventListener('click', () => {
     var player_name = input_field.value;
     // DO INPUT VALIDATION HERE... OR WHEN USER CLICKS OUT OF INPUT FIELD?? STRAT?
     console.log(`Search Term: ${player_name}`);
+
     // API call
     getPlayer(player_name);
-    // open window with populated player stats from API
-    window.open('html/player_page.php', '_blank');
 });
 
 // make 'enter' key trigger search button
