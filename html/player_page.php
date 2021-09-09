@@ -24,7 +24,7 @@
                 <div id="subgrid_container">
                     <div id="team_info" class="subgrid_item">
                         <!-- need to load these images based on the specific player and team. src will be variable -->
-                        <img id="team_logo" src="../images/lakers_logo.png" alt="logo of player's team">
+                        <img id="team_logo" src="" alt="logo of player's team">
                     </div>
                     <div id="player_photo_item" class="subgrid_item">
                         <img id="player_photo" src="" alt="player headshot">

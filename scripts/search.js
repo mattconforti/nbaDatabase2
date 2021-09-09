@@ -49,7 +49,7 @@ function getPlayer(search_term) {
    // the code that checks this needs to check against all lowercase first names - last names need to be first letter
    // capitals for the api query term
 
-   // they changed the program to make an endpoint that searches by full name. after a comment i made to the 
+   // they changed the api to make an endpoint that searches by full name. after a comment i made to the creator.
    fetch(`https://nba-player-individual-stats.p.rapidapi.com/players/lastname?lastname=${names[1]}`, {
 	"method": "GET",
 	"headers": {
@@ -74,16 +74,14 @@ function getPlayer(search_term) {
                 // get team with designated function & grab team photo for display
                 var player_team = responseJSON[counter]["team"];
                 console.log("API call for: " + player_team);
-                getTeam(player_team);
-
 
                 // open player_window
                 var player_window = window.open('html/player_page.php', '_blank');
 
                 // wait for the window to load before inserting new content
                 player_window.onload = function() {
-                    console.log(player_window.document);
                     displayStats(player_img_url, player_window);
+                    displayTeamPhoto(player_team, player_window);
                 };
             }
         }
@@ -103,8 +101,31 @@ function getPlayer(search_term) {
     });
 }
 
-function getTeam(team_name) {
-    
+function displayTeamPhoto(team_name, opened_window) {
+    fetch("https://nba-player-individual-stats.p.rapidapi.com/teams", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "nba-player-individual-stats.p.rapidapi.com",
+		"x-rapidapi-key": "3683bd61dfmshd234785dbb9d5bep1253d9jsn5a556f7f2e21"
+	}
+    })
+    .then(rspns => rspns.json())
+    .then(rspnsJSON => {
+        console.log("Teams: " + rspnsJSON);
+        for (let i = 0; i < 30; i++) {
+            // match team name - made a note to api creator to query api by name so this loop ^
+            // is not needed
+            if (rspnsJSON[i]["name"] == team_name) {
+                console.log("match: " + rspnsJSON[i]["name"]);
+                var team_photo_url = rspnsJSON[i]["teamLogoUrl"];
+                // set team logo to url from api results
+                opened_window.document.getElementById("team_logo").src = team_photo_url;
+            }
+        }
+    })
+    .catch(err => {
+	    console.error(err);
+    });
 }
 
 function getStats(playerId) {
@@ -126,7 +147,6 @@ function getStats(playerId) {
 
 function displayStats(stats, opened_window) {
     opened_window.document.getElementById("player_photo").src = stats;
-    console.log(opened_window.document.getElementById("player_photo").src);
 }
 
 search_button.addEventListener('click', () => {
