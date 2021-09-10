@@ -67,21 +67,18 @@ function getPlayer(search_term) {
             // match first name with user input
             if (responseJSON[counter]["firstName"] === names[0]) {
                 console.log("match");
-                // get all info needed & open window to display data
-                var player_img_url = responseJSON[counter]["headShotUrl"];
-                console.log(player_img_url);
 
-                // get team with designated function & grab team photo for display
-                var player_team = responseJSON[counter]["team"];
-                console.log("API call for: " + player_team);
+                // get all info needed & open window to display data
+                const { headShotUrl, age, team } = responseJSON[counter];
+                console.log(headShotUrl, age, team);
 
                 // open player_window
                 var player_window = window.open('html/player_page.php', '_blank');
 
                 // wait for the window to load before inserting new content
                 player_window.onload = function() {
-                    displayStats(player_img_url, player_window);
-                    displayTeamPhoto(player_team, player_window);
+                    displayStats(headShotUrl, player_window);
+                    displayTeamPhoto(team, player_window);
                 };
             }
         }
@@ -111,7 +108,7 @@ function displayTeamPhoto(team_name, opened_window) {
     })
     .then(rspns => rspns.json())
     .then(rspnsJSON => {
-        console.log("Teams: " + rspnsJSON);
+        // loop thru teams
         for (let i = 0; i < 30; i++) {
             // match team name - made a note to api creator to query api by name so this loop ^
             // is not needed
