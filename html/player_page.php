@@ -35,19 +35,20 @@
                             <h2 class="player_info_label">Age:</h2>
                         </div>
                         <div class="nested_subgrid_item">
-                            <h2 class="player_info"></h2>
+                            <h2 id="player_age" class="player_info"></h2>
+                            <!-- NEED TO CHANGE FONT FOR THIS ^^ -->
                         </div>
                         <div class="nested_subgrid_item">
                             <h2 class="player_info_label">Height:</h2>
                         </div>
                         <div class="nested_subgrid_item">
-                            <h2 class="player_info"></h2>
+                            <h2 id="player_height" class="player_info"></h2>
                         </div>
                         <div class="nested_subgrid_item">
                             <h2 class="player_info_label">Position:</h2>
                         </div>
                         <div class="nested_subgrid_item">
-                            <h2 class="player_info"></h2>
+                            <h2 id="player_position" class="player_info"></h2>
                         </div>
                     </div>
                 </div>
