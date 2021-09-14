@@ -1,6 +1,15 @@
 var input_field = document.getElementById("player_input");
 var search_button = document.getElementById("search_button");
 
+// position abbreviations
+const pos_abv = {
+    "Point Guard": "PG",
+    "Shooting Guard": "SG",
+    "Small Forward": "SF",
+    "Power Forward": "PF",
+    "Center": "C"
+}
+
 // empty nba_player object
 var nba_player = {
     "name" : "",
@@ -68,16 +77,16 @@ function getPlayer(search_term) {
             if (responseJSON[counter]["firstName"] === names[0]) {
                 console.log("match");
 
-                // get all info needed & open window to display data
-                const { headShotUrl, age, team } = responseJSON[counter];
-                console.log(headShotUrl, age, team);
+                // grab the team for displayTeamPhoto()
+                var team = responseJSON[counter]["team"];
 
                 // open player_window
                 var player_window = window.open('html/player_page.php', '_blank');
 
                 // wait for the window to load before inserting new content
                 player_window.onload = function() {
-                    displayStats(headShotUrl, player_window);
+                    // display api fetch results
+                    displayPlayerContent(responseJSON[counter], player_window);
                     displayTeamPhoto(team, player_window);
                 };
             }
@@ -142,14 +151,29 @@ function getStats(playerId) {
     });
 }
 
-function displayStats(stats, opened_window) {
-    opened_window.document.getElementById("player_photo").src = stats;
+function displayPlayerContent(result_obj, opened_window) {
+    // obj destructuring
+    var { headShotUrl, age, height, weight, position, team } = result_obj;
+    // Hi im Matt Conforti. Im a 23 year old, 5'11" 200lb point guard from the New York Knicks.
+    // I average x for my career, but this season i average... i am a x time MVP, x time DPOY, etc.
+    
+    // get position abbreviation from key/value pair
+    position = pos_abv[position];
+
+    // display stuff
+    opened_window.document.getElementById("player_photo").src = headShotUrl;
+    opened_window.document.getElementById("player_age").innerText = age;
+    opened_window.document.getElementById("player_height").innerText = height;
+    opened_window.document.getElementById("player_position").innerText = position;
 }
 
 search_button.addEventListener('click', () => {
     var player_name = input_field.value;
     // DO INPUT VALIDATION HERE... OR WHEN USER CLICKS OUT OF INPUT FIELD?? STRAT?
     console.log(`Search Term: ${player_name}`);
+
+    // CIRCLE LOADER BEFORE API CALL for UX - lets them know something computational
+    // & time consuming is being done
 
     // API call
     getPlayer(player_name);
