@@ -153,7 +153,8 @@ function getStats(playerId) {
 
 function displayPlayerContent(result_obj, opened_window) {
     // obj destructuring
-    var { headShotUrl, age, height, weight, position, team } = result_obj;
+    var { headShotUrl, age, height, weight, position, team, careerPoints, carrerAssists, careerRebounds,
+        careerTurnovers, careerPercentageFieldGoal, careerPercentageThree } = result_obj;
     // Hi im Matt Conforti. Im a 23 year old, 5'11" 200lb point guard from the New York Knicks.
     // I average x for my career, but this season i average... i am a x time MVP, x time DPOY, etc.
     
@@ -165,8 +166,15 @@ function displayPlayerContent(result_obj, opened_window) {
     opened_window.document.getElementById("player_age").innerText = age;
     opened_window.document.getElementById("player_height").innerText = height;
     opened_window.document.getElementById("player_position").innerText = position;
+    opened_window.document.getElementById("career_pts").innerText = careerPoints;
+    opened_window.document.getElementById("career_ast").innerText = carrerAssists;  // mispelled in actual API
+    opened_window.document.getElementById("career_reb").innerText = careerRebounds;
+    opened_window.document.getElementById("career_tov").innerText = careerTurnovers;
+    opened_window.document.getElementById("career_fgp").innerText = careerPercentageFieldGoal;
+    opened_window.document.getElementById("career_3pp").innerText = careerPercentageThree;
 }
 
+// click the search button
 search_button.addEventListener('click', () => {
     var player_name = input_field.value;
     // DO INPUT VALIDATION HERE... OR WHEN USER CLICKS OUT OF INPUT FIELD?? STRAT?

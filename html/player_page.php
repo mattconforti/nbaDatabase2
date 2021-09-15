@@ -3,8 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- make sizes dynamic & good for mobile!!! percentages of screen or media queries. -->
+        <!-- search - "responsive mobile design using" on Google. -->
         <title>Player View</title>
-        <!-- get player name above? using php maybe?? -->
+        <!-- get player name above? using php maybe?? or just js?? -->
         <!-- Google Font API -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -107,13 +109,13 @@
                         <h3>PTS</h3>
                     </div>
                     <div class="subgrid3_item">
-                        <h3>MIN</h3>
-                    </div>
-                    <div class="subgrid3_item">
                         <h3>AST</h3>
                     </div>
                     <div class="subgrid3_item">
                         <h3>REB</h3>
+                    </div>
+                    <div class="subgrid3_item">
+                        <h3>TOV</h3>
                     </div>
                     <div class="subgrid3_item">
                         <h3>FG%</h3>
@@ -121,20 +123,29 @@
                     <div class="subgrid3_item">
                         <h3>3P%</h3>
                     </div>
+                    <!-- make blocks & free throw percentage category?? other stats from API? -->
+                    <!-- show dateLastUpdated for each result set?????? only if its constantly updated... -->
                     <div class="subgrid3_item">
                         <h3>Career</h3>
                     </div>
                     <div class="subgrid3_item">
+                        <h3 id="career_pts"></h3>
                     </div>
                     <div class="subgrid3_item">
+                        <h3 id="career_ast"></h3>
                     </div>
                     <div class="subgrid3_item">
+                        <h3 id="career_reb"></h3>
                     </div>
                     <div class="subgrid3_item">
+                        <h3 id="career_tov"></h3>
                     </div>
                     <div class="subgrid3_item">
+                        <h3 id="career_fgp"></h3>
+                        <!-- make these fonts different ^^ -->
                     </div>
                     <div class="subgrid3_item">
+                        <h3 id="career_3pp"></h3>
                     </div>
                 </div>
             </div>
