@@ -10,7 +10,7 @@
         <!-- Google Font API -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=PT+Serif+Caption&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=PT+Serif+Caption&display=swap" rel="stylesheet">
         <!---->
         <link rel="stylesheet" type="text/css" href="../styles/style.css">
     </head>
@@ -38,7 +38,7 @@
                         </div>
                         <div class="nested_subgrid_item">
                             <h2 id="player_age" class="player_info"></h2>
-                            <!-- NEED TO CHANGE FONT FOR THIS ^^ -->
+                            <!-- NEED TO CHANGE FONT FOR THIS, other than Orbitron? Doesnt look horrible^^ -->
                         </div>
                         <div class="nested_subgrid_item">
                             <h2 class="player_info_label">Height:</h2>
@@ -129,23 +129,22 @@
                         <h3>Career</h3>
                     </div>
                     <div class="subgrid3_item">
-                        <h3 id="career_pts"></h3>
+                        <h3 id="career_pts" class="career_stat"></h3>
                     </div>
                     <div class="subgrid3_item">
-                        <h3 id="career_ast"></h3>
+                        <h3 id="career_ast" class="career_stat"></h3>
                     </div>
                     <div class="subgrid3_item">
-                        <h3 id="career_reb"></h3>
+                        <h3 id="career_reb" class="career_stat"></h3>
                     </div>
                     <div class="subgrid3_item">
-                        <h3 id="career_tov"></h3>
+                        <h3 id="career_tov" class="career_stat"></h3>
                     </div>
                     <div class="subgrid3_item">
-                        <h3 id="career_fgp"></h3>
-                        <!-- make these fonts different ^^ -->
+                        <h3 id="career_fgp" class="career_stat"></h3>
                     </div>
                     <div class="subgrid3_item">
-                        <h3 id="career_3pp"></h3>
+                        <h3 id="career_3pp" class="career_stat"></h3>
                     </div>
                 </div>
             </div>
