@@ -95,8 +95,8 @@ function getPlayer(search_term) {
 
                     // get each season for players & display season stats
                     // grid needs to be dynamic to add for more rows (seasons) based on player
-                    getSeasons(player_id);
-                    // displaySeasons separate function or in this function above?? ^^
+                    getSeasons(player_id, player_window);
+                    // displaySeasons is inside this above function ^^
                 };
             }
         }
@@ -179,9 +179,9 @@ search_button.addEventListener('click', () => {
     getPlayer(player_name);
 });
 
-function getSeasons(playerId) {
+function getSeasons(player_ID, opened_window) {
     // do this & then extract individual seasons into objects
-    fetch(`https://nba-player-individual-stats.p.rapidapi.com/playerseasons?playerId=${playerId}`, {
+    fetch(`https://nba-player-individual-stats.p.rapidapi.com/playerseasons?playerId=${player_ID}`, {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "nba-player-individual-stats.p.rapidapi.com",
@@ -191,6 +191,10 @@ function getSeasons(playerId) {
     .then(resp => resp.json())
     .then(respJSON => {
         console.log(respJSON);
+
+        // display the season data and statistics
+        displaySeasons(respJSON, opened_window);
+
         // possible issue: for ex. carmelo got traded mid season 2010-2011 so he has 2 seasons for that season
         // how do we address this? if statement to check if any season names are equal - if so... teams should be different
         // (if teams not different, error in API?? or some other weird reason i cant think of rn)... handle _____ way...
@@ -198,6 +202,17 @@ function getSeasons(playerId) {
     .catch(err => {
 	    console.error(err);
     });
+}
+
+function displaySeasons(result_object, opened_window) {
+    for (let count = 0; count < result_object.length; count++) {
+        console.log(result_object[count]);
+        // pass this obj to a function to display or do it right here - up to you stylistically
+        const { season, team, minsPerGame, pointsPerGame, assistsPerGame, reboundsPerGame,
+              blocksPerGame, turnoversPerGame } = result_object[count];
+        console.log(season);
+        // create new rows for seasons, get elements & add text to them
+    }
 }
 
 // make 'enter' key trigger search button
