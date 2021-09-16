@@ -75,10 +75,14 @@ function getPlayer(search_term) {
             console.log(responseJSON[counter]);
             // match first name with user input
             if (responseJSON[counter]["firstName"] === names[0]) {
-                console.log("match");
+                console.log("Player match");
+                // necessary to store this exact object? seems like a waste bc just creating another reference to it in memory
 
                 // grab the team for displayTeamPhoto()
                 var team = responseJSON[counter]["team"];
+                // grab playerId for getSeasons()
+                var player_id = responseJSON[counter]["id"];
+                console.log("Player ID: " + player_id);
 
                 // open player_window
                 var player_window = window.open('html/player_page.php', '_blank');
@@ -88,6 +92,11 @@ function getPlayer(search_term) {
                     // display api fetch results
                     displayPlayerContent(responseJSON[counter], player_window);
                     displayTeamPhoto(team, player_window);
+
+                    // get each season for players & display season stats
+                    // grid needs to be dynamic to add for more rows (seasons) based on player
+                    getSeasons(player_id);
+                    // displaySeasons separate function or in this function above?? ^^
                 };
             }
         }
@@ -122,29 +131,12 @@ function displayTeamPhoto(team_name, opened_window) {
             // match team name - made a note to api creator to query api by name so this loop ^
             // is not needed
             if (rspnsJSON[i]["name"] == team_name) {
-                console.log("match: " + rspnsJSON[i]["name"]);
+                console.log("Team match: " + rspnsJSON[i]["name"]);
                 var team_photo_url = rspnsJSON[i]["teamLogoUrl"];
                 // set team logo to url from api results
                 opened_window.document.getElementById("team_logo").src = team_photo_url;
             }
         }
-    })
-    .catch(err => {
-	    console.error(err);
-    });
-}
-
-function getStats(playerId) {
-    fetch(`https://free-nba.p.rapidapi.com/stats?player_ids=${playerId}&per_page=25&page=0`, {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "free-nba.p.rapidapi.com",
-		"x-rapidapi-key": "3683bd61dfmshd234785dbb9d5bep1253d9jsn5a556f7f2e21"
-	}
-    })
-    .then(r => r.json())
-    .then(rJSON => {
-        console.log(rJSON);
     })
     .catch(err => {
 	    console.error(err);
@@ -186,6 +178,27 @@ search_button.addEventListener('click', () => {
     // API call
     getPlayer(player_name);
 });
+
+function getSeasons(playerId) {
+    // do this & then extract individual seasons into objects
+    fetch(`https://nba-player-individual-stats.p.rapidapi.com/playerseasons?playerId=${playerId}`, {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "nba-player-individual-stats.p.rapidapi.com",
+		"x-rapidapi-key": "3683bd61dfmshd234785dbb9d5bep1253d9jsn5a556f7f2e21"
+	}
+    })
+    .then(resp => resp.json())
+    .then(respJSON => {
+        console.log(respJSON);
+        // possible issue: for ex. carmelo got traded mid season 2010-2011 so he has 2 seasons for that season
+        // how do we address this? if statement to check if any season names are equal - if so... teams should be different
+        // (if teams not different, error in API?? or some other weird reason i cant think of rn)... handle _____ way...
+    })
+    .catch(err => {
+	    console.error(err);
+    });
+}
 
 // make 'enter' key trigger search button
 document.addEventListener('keyup', e => {

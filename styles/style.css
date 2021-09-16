@@ -71,6 +71,12 @@ hr {
     align-content: center;
     height: 250px;
     /* fix margin left??? doesnt align with the other items in the grid?? */
+    border: 2px solid red;
+}
+
+.nested_subgrid_item {
+    border: 2px solid red;
+    /* align/justify text horizontally & vertically */
 }
 
 .player_info_label {
@@ -83,7 +89,9 @@ hr {
 }
 
 .player_info {
-    font-size: 1.75em;
+    font-size: 1.25em;
+    font-family: 'Orbitron', monospace;
+    /* FIX HORIXONTAL SPACING RELATIVE TO LABELS */
     /* use consistent units throughout this project - max of like 3 maybe?? idk */
     /* MESS WITH SIZING & SPACING OF EVERYTHING!!! MAKE IMAGES & FONTS BIGGER & 
        THINGS SPACED OUT NICELY!
@@ -146,6 +154,10 @@ h2 {
 h3 {
     margin-top: 6px;
     /* STILL HAVE TO CLEAN UP CENTERING & SPACING & SIZING & FONTS/AESTHETICS ETC */
+}
+
+.career_stat {
+    font-family: 'Orbitron', monospace;
 }
 
 #mvp_awards {
