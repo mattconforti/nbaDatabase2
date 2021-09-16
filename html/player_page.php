@@ -78,7 +78,7 @@
                     <div class="subgrid2_item">
                         <h3>FG%</h3>
                     </div>
-                    <div class="subgrid2_item">
+                    <div id="tpp_label" class="subgrid2_item">
                         <h3>3P%</h3>
                     </div>
                     <div class="subgrid2_item">

@@ -210,9 +210,26 @@ function displaySeasons(result_object, opened_window) {
         // pass this obj to a function to display or do it right here - up to you stylistically
         const { season, team, minsPerGame, pointsPerGame, assistsPerGame, reboundsPerGame,
               blocksPerGame, turnoversPerGame } = result_object[count];
+        // get rest of stats & same for career - i want to displauy every stat this API has. make grid & areas
+        // bigger if need be (deff will at least for rows of season data & maybe for columns new stats added)
         console.log(season);
         // create new rows for seasons, get elements & add text to them
+        createRow(season, opened_window);
     }
+}
+
+function createRow(season, opened_window) {
+    // create element, add class = text element etc, add it to DOM. doing this for each season
+    const subrid_2_item = opened_window.document.createElement("div");
+    subrid_2_item.classList.add("subgrid2_item");
+    const h3_node = opened_window.document.createElement("h3");
+    h3_node.classList.add("season_stat");
+    h3_node.innerText = season;
+    // add stuff to DOM
+    subrid_2_item.appendChild(h3_node);
+    const tpp_label = opened_window.document.getElementById("tpp_label");
+    tpp_label.append(subrid_2_item);
+    // have to update grid itself to allow for new elements
 }
 
 // make 'enter' key trigger search button
