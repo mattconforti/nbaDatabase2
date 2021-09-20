@@ -224,12 +224,69 @@ function createRow(season, opened_window) {
     subrid_2_item.classList.add("subgrid2_item");
     const h3_node = opened_window.document.createElement("h3");
     h3_node.classList.add("season_stat");
-    h3_node.innerText = season;
+    h3_node.innerText = season;  // probably want these season names in reverse order!!! 2021 at the top!!
+
     // add stuff to DOM
     subrid_2_item.appendChild(h3_node);
-    const tpp_label = opened_window.document.getElementById("tpp_label");
-    tpp_label.append(subrid_2_item);
-    // have to update grid itself to allow for new elements
+    var subgrid2_container = opened_window.document.getElementById("subgrid_container2");
+    subgrid2_container.appendChild(subrid_2_item);
+
+    // have to create other columns as well, can maybe insert data above?? or do it all here & pass
+    // in more than the season name
+
+    // do this in a loop?? deff would be more readable & maybe complexity/time efficient
+    // REFACTOR THIS PART!!! DONE IN A LOOP EASILY!!! for 6 iterations (7 if i wanna include the season label)
+    const subrid_2_item_2 = opened_window.document.createElement("div");
+    subrid_2_item_2.classList.add("subgrid2_item");
+    const h3_node_2 = opened_window.document.createElement("h3");
+    h3_node_2.classList.add("season_stat");
+    // add to DOM
+    subrid_2_item_2.appendChild(h3_node_2);
+    subgrid2_container.appendChild(subrid_2_item_2);
+
+    const subrid_2_item_3 = opened_window.document.createElement("div");
+    subrid_2_item_3.classList.add("subgrid2_item");
+    const h3_node_3 = opened_window.document.createElement("h3");
+    h3_node_3.classList.add("season_stat");
+    // add to DOM
+    subrid_2_item_3.appendChild(h3_node_3);
+    subgrid2_container.appendChild(subrid_2_item_3);
+
+    const subrid_2_item_4 = opened_window.document.createElement("div");
+    subrid_2_item_4.classList.add("subgrid2_item");
+    const h3_node_4 = opened_window.document.createElement("h3");
+    h3_node_4.classList.add("season_stat");
+    // add to DOM
+    subrid_2_item_4.appendChild(h3_node_4);
+    subgrid2_container.appendChild(subrid_2_item_4);
+
+    const subrid_2_item_5 = opened_window.document.createElement("div");
+    subrid_2_item_5.classList.add("subgrid2_item");
+    const h3_node_5 = opened_window.document.createElement("h3");
+    h3_node_5.classList.add("season_stat");
+    // add to DOM
+    subrid_2_item_5.appendChild(h3_node_5);
+    subgrid2_container.appendChild(subrid_2_item_5);
+
+    const subrid_2_item_6 = opened_window.document.createElement("div");
+    subrid_2_item_6.classList.add("subgrid2_item");
+    const h3_node_6 = opened_window.document.createElement("h3");
+    h3_node_6.classList.add("season_stat");
+    // add to DOM
+    subrid_2_item_6.appendChild(h3_node_6);
+    subgrid2_container.appendChild(subrid_2_item_6);
+
+    const subrid_2_item_7 = opened_window.document.createElement("div");
+    subrid_2_item_7.classList.add("subgrid2_item");
+    const h3_node_7 = opened_window.document.createElement("h3");
+    h3_node_7.classList.add("season_stat");
+    // add to DOM
+    subrid_2_item_7.appendChild(h3_node_7);
+    subgrid2_container.appendChild(subrid_2_item_7);
+
+    // have to update grid itself to allow for new elements?
+    // yes - have to update css to do rows: repeat for as many seasons as the player has (pass in length)
+    console.log(opened_window.document);
 }
 
 // make 'enter' key trigger search button

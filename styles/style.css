@@ -71,12 +71,11 @@ hr {
     align-content: center;
     height: 250px;
     /* fix margin left??? doesnt align with the other items in the grid?? */
-    border: 2px solid red;
 }
 
 .nested_subgrid_item {
-    border: 2px solid red;
-    /* align/justify text horizontally & vertically */
+    justify-self: center;
+    /* do i like the way this is done? or do it another way?? */
 }
 
 .player_info_label {
