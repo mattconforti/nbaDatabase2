@@ -205,91 +205,58 @@ function getSeasons(player_ID, opened_window) {
 }
 
 function displaySeasons(result_object, opened_window) {
-    for (let count = 0; count < result_object.length; count++) {
+    const career_length = result_object.length;
+    console.log("Career Length: " + career_length + " years");  // exception for Melo b/c 2 2010-11 seasons
+    for (let count = career_length-1; count >= 0; count--) {
         console.log(result_object[count]);
-        // pass this obj to a function to display or do it right here - up to you stylistically
-        const { season, team, minsPerGame, pointsPerGame, assistsPerGame, reboundsPerGame,
-              blocksPerGame, turnoversPerGame } = result_object[count];
         // get rest of stats & same for career - i want to displauy every stat this API has. make grid & areas
         // bigger if need be (deff will at least for rows of season data & maybe for columns new stats added)
-        console.log(season);
-        // create new rows for seasons, get elements & add text to them
-        createRow(season, opened_window);
+        // create new rows for seasons, get elements & add text to them & update grid
+        createRow(result_object[count], opened_window);
+        updateSeasonsGrid(career_length, opened_window);
     }
 }
 
-function createRow(season, opened_window) {
-    // create element, add class = text element etc, add it to DOM. doing this for each season
-    const subrid_2_item = opened_window.document.createElement("div");
-    subrid_2_item.classList.add("subgrid2_item");
-    const h3_node = opened_window.document.createElement("h3");
-    h3_node.classList.add("season_stat");
-    h3_node.innerText = season;  // probably want these season names in reverse order!!! 2021 at the top!!
-
-    // add stuff to DOM
-    subrid_2_item.appendChild(h3_node);
+function createRow(season_obj, opened_window) {
+    // define subgrid to be added to
     var subgrid2_container = opened_window.document.getElementById("subgrid_container2");
-    subgrid2_container.appendChild(subrid_2_item);
 
-    // have to create other columns as well, can maybe insert data above?? or do it all here & pass
-    // in more than the season name
+    // define all stats & put into easily iterable array
+    const { season, team, minsPerGame, pointsPerGame, assistsPerGame, reboundsPerGame,
+            blocksPerGame, turnoversPerGame, percentageFieldGoal, percentageThree } = season_obj;
+    const stats_arr = [ season, pointsPerGame, minsPerGame, assistsPerGame, reboundsPerGame,
+                        percentageFieldGoal, percentageThree ];
 
-    // do this in a loop?? deff would be more readable & maybe complexity/time efficient
-    // REFACTOR THIS PART!!! DONE IN A LOOP EASILY!!! for 6 iterations (7 if i wanna include the season label)
-    const subrid_2_item_2 = opened_window.document.createElement("div");
-    subrid_2_item_2.classList.add("subgrid2_item");
-    const h3_node_2 = opened_window.document.createElement("h3");
-    h3_node_2.classList.add("season_stat");
-    // add to DOM
-    subrid_2_item_2.appendChild(h3_node_2);
-    subgrid2_container.appendChild(subrid_2_item_2);
+    // create element, add class = text element etc, add it to DOM. doing this for each season
+    // for each column
+    for (let col_count = 0; col_count < 7; col_count++) {
+        // create div grid item
+        const new_subgrid2_item = opened_window.document.createElement("div");
+        new_subgrid2_item.classList.add("subgrid2_item");
+        // create h3 to put stats into
+        const h3_node = opened_window.document.createElement("h3");
+        h3_node.classList.add("season_stat");
+        h3_node.innerText = stats_arr[col_count];
 
-    const subrid_2_item_3 = opened_window.document.createElement("div");
-    subrid_2_item_3.classList.add("subgrid2_item");
-    const h3_node_3 = opened_window.document.createElement("h3");
-    h3_node_3.classList.add("season_stat");
-    // add to DOM
-    subrid_2_item_3.appendChild(h3_node_3);
-    subgrid2_container.appendChild(subrid_2_item_3);
-
-    const subrid_2_item_4 = opened_window.document.createElement("div");
-    subrid_2_item_4.classList.add("subgrid2_item");
-    const h3_node_4 = opened_window.document.createElement("h3");
-    h3_node_4.classList.add("season_stat");
-    // add to DOM
-    subrid_2_item_4.appendChild(h3_node_4);
-    subgrid2_container.appendChild(subrid_2_item_4);
-
-    const subrid_2_item_5 = opened_window.document.createElement("div");
-    subrid_2_item_5.classList.add("subgrid2_item");
-    const h3_node_5 = opened_window.document.createElement("h3");
-    h3_node_5.classList.add("season_stat");
-    // add to DOM
-    subrid_2_item_5.appendChild(h3_node_5);
-    subgrid2_container.appendChild(subrid_2_item_5);
-
-    const subrid_2_item_6 = opened_window.document.createElement("div");
-    subrid_2_item_6.classList.add("subgrid2_item");
-    const h3_node_6 = opened_window.document.createElement("h3");
-    h3_node_6.classList.add("season_stat");
-    // add to DOM
-    subrid_2_item_6.appendChild(h3_node_6);
-    subgrid2_container.appendChild(subrid_2_item_6);
-
-    const subrid_2_item_7 = opened_window.document.createElement("div");
-    subrid_2_item_7.classList.add("subgrid2_item");
-    const h3_node_7 = opened_window.document.createElement("h3");
-    h3_node_7.classList.add("season_stat");
-    // add to DOM
-    subrid_2_item_7.appendChild(h3_node_7);
-    subgrid2_container.appendChild(subrid_2_item_7);
-
-    // have to update grid itself to allow for new elements?
-    // yes - have to update css to do rows: repeat for as many seasons as the player has (pass in length)
+        // add new elems to DOM
+        new_subgrid2_item.appendChild(h3_node);
+        subgrid2_container.appendChild(new_subgrid2_item);
+    }
     console.log(opened_window.document);
 }
 
+function updateSeasonsGrid(amt_of_seasons, opened_window) {
+    // update amount of rows in season stats grid
+    opened_window.document.getElementById("subgrid_container2").style.gridTemplateRows = `repeat(${amt_of_seasons + 1}, 35px)`;
+    // add 1 for label row in grid! ^^
+    // update size of the entire grid item itself
+    opened_window.document.getElementById("season_stats").style.height = `${35 * (amt_of_seasons + 3)}px`;
+    // need to clean up this number a few pixels - decide if i want room around grids inside grid items - how big should
+    // the margin really be??
+}
+
 // make 'enter' key trigger search button
+// consistency on single or double quotes!! & other conventions like camelcase or underscore etc
 document.addEventListener('keyup', e => {
     if (e.key === 'Enter') {
         e.preventDefault();  // prevent default behavior
