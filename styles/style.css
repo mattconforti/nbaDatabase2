@@ -53,6 +53,7 @@ hr {
 
 #player_item {
     grid-column-start: span 2;
+    background-color: lightgray;
 }
 
 #subgrid_container {
@@ -75,8 +76,8 @@ hr {
 }
 
 .nested_subgrid_item {
+    /* do i like the way this is done? or do it another way?? */
     border: 2px solid red;
-    /* align/justify text horizontally & vertically */
 }
 
 .player_info_label {
@@ -113,15 +114,18 @@ hr {
     grid-row-start: span 2;
     text-align: center;
     margin-top: 40px;
+    background-color: lightgray;
 }
 
 #career_stats {
     text-align: center;
     margin-top: 40px;
+    background-color: lightgray;
 }
 
 #career_accolades {
     text-align: center;
+    background-color: lightgray;
 }
 
 h2 {
@@ -142,7 +146,7 @@ h2 {
 #subgrid_container2 {
     display: grid;
     grid-template-columns: 90px 75px 75px 75px 75px 75px 75px;
-    grid-template-rows: 35px 35px 35px 35px 35px 35px 35px;
+    grid-template-rows: 35px;
     /* however many seasons player played determines # of rows - min 2 */
     margin-top: 0px;
 }
