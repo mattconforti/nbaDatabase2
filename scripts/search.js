@@ -145,8 +145,9 @@ function displayTeamPhoto(team_name, opened_window) {
 
 function displayPlayerContent(result_obj, opened_window) {
     // obj destructuring
-    var { headShotUrl, age, height, weight, position, team, careerPoints, carrerAssists, careerRebounds,
-        careerTurnovers, careerPercentageFieldGoal, careerPercentageThree } = result_obj;
+    var { firstName, lastName, headShotUrl, age: p_age, height, weight, position, team, jerseyNumber, careerPoints,
+         carrerAssists, careerRebounds, careerTurnovers, careerPercentageFieldGoal, careerPercentageThree } = result_obj;
+        console.log("Age: " + p_age);
     // Hi im Matt Conforti. Im a 23 year old, 5'11" 200lb point guard from the New York Knicks.
     // I average x for my career, but this season i average... i am a x time MVP, x time DPOY, etc.
     
@@ -155,9 +156,10 @@ function displayPlayerContent(result_obj, opened_window) {
 
     // display stuff
     opened_window.document.getElementById("player_photo").src = headShotUrl;
-    opened_window.document.getElementById("player_age").innerText = age;
-    opened_window.document.getElementById("player_height").innerText = height;
-    opened_window.document.getElementById("player_position").innerText = position;
+    opened_window.document.getElementById("player_name_heading").innerText = firstName + " " + lastName;
+    //opened_window.document.getElementById("player_age").innerText = p_age;
+    //opened_window.document.getElementById("player_height").innerText = height;
+    //opened_window.document.getElementById("player_position").innerText = position;
     opened_window.document.getElementById("career_pts").innerText = careerPoints;
     opened_window.document.getElementById("career_ast").innerText = carrerAssists;  // mispelled in actual API
     opened_window.document.getElementById("career_reb").innerText = careerRebounds;
@@ -235,7 +237,12 @@ function createRow(season_obj, opened_window) {
         new_subgrid2_item.classList.add("subgrid2_item");
         // create h3 to put stats into
         const h3_node = opened_window.document.createElement("h3");
-        h3_node.classList.add("season_stat");
+        if (col_count === 0) {  // this is the season label ("2020-21")
+            h3_node.classList.add("season_num_label");
+        }
+        else {
+            h3_node.classList.add("season_stat");
+        }
         h3_node.innerText = stats_arr[col_count];
 
         // add new elems to DOM

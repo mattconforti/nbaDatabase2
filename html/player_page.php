@@ -31,8 +31,37 @@
                     <div id="player_photo_item" class="subgrid_item">
                         <img id="player_photo" src="" alt="player headshot">
                     </div>
+                    <div id="player_info_item" class="subgrid_item">
+                        <div class="nested_subgrid_item">
+                            <h3 id="player_name_heading" class="player_info"></h3>
+                        </div>
+                        <div class="nested_subgrid_item">
+                            <h3 id="jersey_num_heading" class="player_info">#7</h3>
+                        </div>
+                        <!--
+                        <div class="nested_subgrid_item">
+                            <h3 class="player_info_label">Age:</h3>
+                        </div>
+                        <div class="nested_subgrid_item">
+                            <h3 id="player_age" class="player_info"></h3>
+                        </div>
+                        <div class="nested_subgrid_item">
+                            <h3 class="player_info_label">Height:</h3>
+                        </div>
+                        <div class="nested_subgrid_item">
+                            <h3 id="player_height" class="player_info"></h3>
+                        </div>
+                        <div class="nested_subgrid_item">
+                            <h3 class="player_info_label">Position:</h3>
+                        </div>
+                        <div class="nested_subgrid_item">
+                            <h3 id="player_position" class="player_info"></h3>
+                        </div>
+                        -->
+                    </div>
                 </div>
             </div>
+            <!-- move this to right side! player info & career stats left side! -->
             <div id="season_stats" class="grid_item">
                 <h2>Season Stats</h2>
                 <hr class="stats_dividers">
