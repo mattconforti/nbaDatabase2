@@ -66,18 +66,12 @@ hr {
 
 #player_info_item {
     display: grid;
-    grid-template-columns: 100px 100px;
-    grid-template-rows: repeat(3,50px);
-    justify-content: center;
+    grid-template-columns: 300px;
+    grid-template-rows: 50px 75px;
+    justify-items: center;
     align-content: center;
     height: 250px;
     /* fix margin left??? doesnt align with the other items in the grid?? */
-    border: 2px solid red;
-}
-
-.nested_subgrid_item {
-    /* do i like the way this is done? or do it another way?? */
-    border: 2px solid red;
 }
 
 .player_info_label {
@@ -90,13 +84,18 @@ hr {
 }
 
 .player_info {
-    font-size: 1.25em;
+    font-size: 1.5em;
     font-family: 'Orbitron', monospace;
     /* FIX HORIXONTAL SPACING RELATIVE TO LABELS */
     /* use consistent units throughout this project - max of like 3 maybe?? idk */
     /* MESS WITH SIZING & SPACING OF EVERYTHING!!! MAKE IMAGES & FONTS BIGGER & 
        THINGS SPACED OUT NICELY!
     */
+}
+
+#jersey_num_heading {
+    font-family: 'Orbitron', monospace;
+    font-size: 2.5em;
 }
 
 #team_logo {
@@ -115,6 +114,15 @@ hr {
     text-align: center;
     margin-top: 40px;
     background-color: lightgray;
+    /* make these gray areas have box-shadows?? floating above the page. */
+}
+
+.season_num_label {
+    font-family: initial;
+}
+
+.season_stat {
+    font-family: 'Orbitron', monospace;
 }
 
 #career_stats {
