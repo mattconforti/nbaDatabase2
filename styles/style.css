@@ -84,18 +84,20 @@ hr {
 }
 
 .player_info {
-    font-size: 1.5em;
+    font-size: 1.75em;
     font-family: 'Orbitron', monospace;
     /* FIX HORIXONTAL SPACING RELATIVE TO LABELS */
     /* use consistent units throughout this project - max of like 3 maybe?? idk */
     /* MESS WITH SIZING & SPACING OF EVERYTHING!!! MAKE IMAGES & FONTS BIGGER & 
        THINGS SPACED OUT NICELY!
     */
+    font-style: italic;
 }
 
 #jersey_num_heading {
-    font-family: 'Orbitron', monospace;
+    font-family: 'Graduate', monospace;
     font-size: 2.5em;
+    font-style: italic;
 }
 
 #team_logo {
