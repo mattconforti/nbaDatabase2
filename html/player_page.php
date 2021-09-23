@@ -10,7 +10,7 @@
         <!-- Google Font API -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=PT+Serif+Caption&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Graduate&family=Orbitron:wght@500&family=PT+Serif+Caption&display=swap" rel="stylesheet">
         <!---->
         <link rel="stylesheet" type="text/css" href="../styles/style.css">
     </head>
@@ -58,35 +58,6 @@
                             <h3 id="player_position" class="player_info"></h3>
                         </div>
                         -->
-                    </div>
-                </div>
-            </div>
-            <!-- move this to right side! player info & career stats left side! -->
-            <div id="season_stats" class="grid_item">
-                <h2>Season Stats</h2>
-                <hr class="stats_dividers">
-                <div id="subgrid_container2">
-                    <div class="subgrid2_item">
-                        <h3>Season:</h3>
-                    </div>
-                    <div class="subgrid2_item">
-                        <h3>PTS</h3>
-                    </div>
-                    <div class="subgrid2_item">
-                        <h3>MIN</h3>
-                    </div>
-                    <div class="subgrid2_item">
-                        <h3>AST</h3>
-                    </div>
-                    <div class="subgrid2_item">
-                        <h3>REB</h3>
-                    </div>
-
-                    <div class="subgrid2_item">
-                        <h3>FG%</h3>
-                    </div>
-                    <div id="tpp_label" class="subgrid2_item">
-                        <h3>3P%</h3>
                     </div>
                 </div>
             </div>
@@ -140,12 +111,33 @@
                     </div>
                 </div>
             </div>
-            <div id="career_accolades" class="grid_item">
-                <h2>Career Accolades</h2>
-                <hr id="accolades_divider" class="stats_dividers">
-                <h3 id="mvp_awards">MVP</h3>
-                <h3>ALL STAR</h3>
-                <h3>DPOY</h3>
+            <div id="season_stats" class="grid_item">
+                <h2>Season Stats</h2>
+                <hr class="stats_dividers">
+                <div id="subgrid_container2">
+                    <div class="subgrid2_item">
+                        <h3>Season:</h3>
+                    </div>
+                    <div class="subgrid2_item">
+                        <h3>PTS</h3>
+                    </div>
+                    <div class="subgrid2_item">
+                        <h3>MIN</h3>
+                    </div>
+                    <div class="subgrid2_item">
+                        <h3>AST</h3>
+                    </div>
+                    <div class="subgrid2_item">
+                        <h3>REB</h3>
+                    </div>
+
+                    <div class="subgrid2_item">
+                        <h3>FG%</h3>
+                    </div>
+                    <div id="tpp_label" class="subgrid2_item">
+                        <h3>3P%</h3>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
