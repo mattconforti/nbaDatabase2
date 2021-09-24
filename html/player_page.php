@@ -31,33 +31,65 @@
                     <div id="player_photo_item" class="subgrid_item">
                         <img id="player_photo" src="" alt="player headshot">
                     </div>
-                    <div id="player_info_item" class="subgrid_item">
+                    <div id="player_name_item" class="subgrid_item">
                         <div class="nested_subgrid_item">
                             <h3 id="player_name_heading" class="player_info"></h3>
                         </div>
                         <div class="nested_subgrid_item">
-                            <h3 id="jersey_num_heading" class="player_info">#7</h3>
+                            <h3 id="jersey_num_heading" class="player_info"></h3>
                         </div>
-                        <!--
-                        <div class="nested_subgrid_item">
-                            <h3 class="player_info_label">Age:</h3>
-                        </div>
-                        <div class="nested_subgrid_item">
-                            <h3 id="player_age" class="player_info"></h3>
-                        </div>
-                        <div class="nested_subgrid_item">
-                            <h3 class="player_info_label">Height:</h3>
-                        </div>
-                        <div class="nested_subgrid_item">
-                            <h3 id="player_height" class="player_info"></h3>
-                        </div>
-                        <div class="nested_subgrid_item">
-                            <h3 class="player_info_label">Position:</h3>
-                        </div>
-                        <div class="nested_subgrid_item">
-                            <h3 id="player_position" class="player_info"></h3>
-                        </div>
-                        -->
+                    </div>
+                </div>
+            </div>
+            <div id="player_info_item" class="grid_item">
+                <h2>Player Info</h2>
+                <hr class="stats_dividers">
+                <div id="info_subgrid">
+                    <div class="info_subgrid_item">
+                        <h3 class="player_info_label">Age:</h3>
+                    </div>
+                    <div class="info_subgrid_item">
+                        <h3 id="player_age" class="player_info"></h3>
+                    </div>
+                    <div class="info_subgrid_item">
+                        <h3 class="player_info_label">Height:</h3>
+                    </div>
+                    <div class="info_subgrid_item">
+                        <h3 id="player_height" class="player_info"></h3>
+                    </div>
+                    <div class="info_subgrid_item">
+                        <h3 class="player_info_label">Position:</h3>
+                    </div>
+                    <div class="info_subgrid_item">
+                        <h3 id="player_position" class="player_info"></h3>
+                    </div>
+                </div>      
+            </div>
+            <div id="season_stats" class="grid_item">
+                <h2>Season Stats</h2>
+                <hr class="stats_dividers">
+                <div id="subgrid_container2">
+                    <div class="subgrid2_item">
+                        <h3>Season:</h3>
+                    </div>
+                    <div class="subgrid2_item">
+                        <h3>PTS</h3>
+                    </div>
+                    <div class="subgrid2_item">
+                        <h3>MIN</h3>
+                    </div>
+                    <div class="subgrid2_item">
+                        <h3>AST</h3>
+                    </div>
+                    <div class="subgrid2_item">
+                        <h3>REB</h3>
+                    </div>
+
+                    <div class="subgrid2_item">
+                        <h3>FG%</h3>
+                    </div>
+                    <div id="tpp_label" class="subgrid2_item">
+                        <h3>3P%</h3>
                     </div>
                 </div>
             </div>
@@ -108,34 +140,6 @@
                     </div>
                     <div class="subgrid3_item">
                         <h3 id="career_3pp" class="career_stat"></h3>
-                    </div>
-                </div>
-            </div>
-            <div id="season_stats" class="grid_item">
-                <h2>Season Stats</h2>
-                <hr class="stats_dividers">
-                <div id="subgrid_container2">
-                    <div class="subgrid2_item">
-                        <h3>Season:</h3>
-                    </div>
-                    <div class="subgrid2_item">
-                        <h3>PTS</h3>
-                    </div>
-                    <div class="subgrid2_item">
-                        <h3>MIN</h3>
-                    </div>
-                    <div class="subgrid2_item">
-                        <h3>AST</h3>
-                    </div>
-                    <div class="subgrid2_item">
-                        <h3>REB</h3>
-                    </div>
-
-                    <div class="subgrid2_item">
-                        <h3>FG%</h3>
-                    </div>
-                    <div id="tpp_label" class="subgrid2_item">
-                        <h3>3P%</h3>
                     </div>
                 </div>
             </div>
