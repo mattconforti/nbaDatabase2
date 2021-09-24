@@ -37,6 +37,7 @@
                         </div>
                         <div class="nested_subgrid_item">
                             <h3 id="jersey_num_heading" class="player_info"></h3>
+                            <!-- should these be h2 for size / importance heirarchy sake? but needs to be styled correctly -->
                         </div>
                     </div>
                 </div>
@@ -49,19 +50,37 @@
                         <h3 class="player_info_label">Age:</h3>
                     </div>
                     <div class="info_subgrid_item">
-                        <h3 id="player_age" class="player_info"></h3>
-                    </div>
-                    <div class="info_subgrid_item">
-                        <h3 class="player_info_label">Height:</h3>
-                    </div>
-                    <div class="info_subgrid_item">
-                        <h3 id="player_height" class="player_info"></h3>
+                        <h3 id="player_age" class="player_info_heading"></h3>
                     </div>
                     <div class="info_subgrid_item">
                         <h3 class="player_info_label">Position:</h3>
                     </div>
                     <div class="info_subgrid_item">
-                        <h3 id="player_position" class="player_info"></h3>
+                        <h3 id="player_position" class="player_info_heading"></h3>
+                    </div>
+                    <div class="info_subgrid_item">
+                        <h3 class="player_info_label">Height:</h3>
+                    </div>
+                    <div class="info_subgrid_item">
+                        <h3 id="player_height" class="player_info_heading"></h3>
+                    </div>
+                    <div class="info_subgrid_item">
+                        <h3 class="player_info_label">Team:</h3>
+                    </div>
+                    <div class="info_subgrid_item">
+                        <h3 id="player_team" class="player_info_heading"></h3>
+                    </div>
+                    <div class="info_subgrid_item">
+                        <h3 class="player_info_label">Weight:</h3>
+                    </div>
+                    <div class="info_subgrid_item">
+                        <h3 id="player_weight" class="player_info_heading"></h3>
+                    </div>
+                    <div class="info_subgrid_item">
+                        <h3 class="player_info_label">DOB:</h3>
+                    </div>
+                    <div class="info_subgrid_item">
+                        <h3 id="player_dob" class="player_info_heading"></h3>
                     </div>
                 </div>      
             </div>
@@ -143,6 +162,8 @@
                     </div>
                 </div>
             </div>
+            <!-- add a section to search by game by entering date - ex. 06/21/21 default text on search input box -->
+            <!-- will have to design another screen and or area in the player page to display these results -->
         </div>
     </body>
 </html>

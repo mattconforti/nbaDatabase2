@@ -10,6 +10,39 @@ const pos_abv = {
     "Center": "C"
 }
 
+const team_abv = {
+    "Atlanta Hawks": "ATL",
+    "Boston Celtics": "BOS",
+    "Brooklyn Nets": "BKN",
+    "Charlotte Hornets": "CHA",
+    "Chicago Bulls": "CHI",
+    "Cleveland Cavaliers": "CLE",
+    "Dallas Mavericks": "DAL",
+    "Denver Nuggets": "DEN",
+    "Detroit Pistons": "DET",
+    "Golden State Warriors": "GSW",
+    "Houston Rockets": "HOU",
+    "Indiana Pacers": "IND",
+    "Los Angeles Clippers": "LAC",
+    "Los Angeles Lakers": "LAL",
+    "Memphis Grizzlies": "MEM",
+    "Miami Heat": "MIA",
+    "Milwaukee Bucks": "MIL",
+    "Minnesota Timberwolves": "MIN",
+    "New Orleans Pelicans": "NOP",
+    "New York Knicks": "NYK",
+    "Oklahoma City Thunder": "OKC",
+    "Orlando Magic": "ORL",
+    "Philadelphia 76ers": "PHI",
+    "Phoenix Suns": "PHO",
+    "Portland Trail Blazers": "POR",
+    "Sacramento Kings": "SAC",
+    "San Antonio Spurs":"SAS",
+    "Toronto Raptors":"TOR",
+    "Utah Jazz": "UTA",
+    "Washington Wizards":"WAS"
+}
+
 // empty nba_player object
 var nba_player = {
     "name" : "",
@@ -144,23 +177,25 @@ function displayTeamPhoto(team_name, opened_window) {
 }
 
 function displayPlayerContent(result_obj, opened_window) {
+
     // obj destructuring
-    var { firstName, lastName, headShotUrl, age: p_age, height, weight, position, team, jerseyNumber, careerPoints,
-         carrerAssists, careerRebounds, careerTurnovers, careerPercentageFieldGoal, careerPercentageThree } = result_obj;
+    var { firstName, lastName, headShotUrl, age: p_age, height, weight, position, team, jerseyNumber, dateOfBirth,
+          careerPoints, carrerAssists, careerRebounds, careerTurnovers, careerPercentageFieldGoal, careerPercentageThree 
+        } = result_obj;
         console.log("Age: " + p_age);
     // Hi im Matt Conforti. Im a 23 year old, 5'11" 200lb point guard from the New York Knicks.
     // I average x for my career, but this season i average... i am a x time MVP, x time DPOY, etc.
-    
-    // get position abbreviation from key/value pair
-    position = pos_abv[position];
 
     // display stuff
     opened_window.document.getElementById("player_photo").src = headShotUrl;
     opened_window.document.getElementById("player_name_heading").innerText = firstName + " " + lastName;
     opened_window.document.getElementById("jersey_num_heading").innerText = jerseyNumber;
-    //opened_window.document.getElementById("player_age").innerText = p_age;
-    //opened_window.document.getElementById("player_height").innerText = height;
-    //opened_window.document.getElementById("player_position").innerText = position;
+    opened_window.document.getElementById("player_age").innerText = p_age;
+    opened_window.document.getElementById("player_height").innerText = height;
+    opened_window.document.getElementById("player_weight").innerText = weight;
+    opened_window.document.getElementById("player_position").innerText = pos_abv[position];
+    opened_window.document.getElementById("player_team").innerText = team_abv[team];
+    opened_window.document.getElementById("player_dob").innerText = dateOfBirth;
     opened_window.document.getElementById("career_pts").innerText = careerPoints;
     opened_window.document.getElementById("career_ast").innerText = carrerAssists;  // mispelled in actual API
     opened_window.document.getElementById("career_reb").innerText = careerRebounds;

@@ -42,7 +42,7 @@ hr {
 #grid_container {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    grid-template-rows: 250px 175px 150px;
+    grid-template-rows: 250px 200px 150px;
     padding: 10px;
     gap: 20px;
 }
@@ -111,8 +111,19 @@ hr {
 
 #info_subgrid {
     display: grid;
-    grid-template-columns: 200px 200px;
-    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 35px 35px 35px;
+    justify-content: center;
+    /* fix horizontal spacing */
+    /* bigger font for items & space in btw items! gap? or adjust margins? */
+}
+
+.player_info_label {
+    font-family: Helvetica, sans-serif;
+}
+
+.player_info_heading {
+    font-family: 'Graduate', monospace;
 }
 
 #season_stats {
@@ -121,6 +132,7 @@ hr {
     margin-top: 40px;
     background-color: lightgray;
     /* make these gray areas have box-shadows?? floating above the page. */
+    /* CENTER THIS GRID & CAREER STATS GRID OR (MORE LIKELY) ADD ANOTHER COLUMN TO IMPROVE SPACING & LAYOUT */
 }
 
 .season_num_label {
@@ -134,6 +146,7 @@ hr {
 #career_stats {
     text-align: center;
     background-color: lightgray;
+    margin-top: 20px;
 }
 
 #career_accolades {
