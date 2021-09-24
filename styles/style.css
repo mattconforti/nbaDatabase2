@@ -64,7 +64,7 @@ hr {
     /* align perfectly ^^ */
 }
 
-#player_info_item {
+#player_name_item {
     display: grid;
     grid-template-columns: 300px;
     grid-template-rows: 50px 75px;
@@ -72,15 +72,6 @@ hr {
     align-content: center;
     height: 250px;
     /* fix margin left??? doesnt align with the other items in the grid?? */
-}
-
-.player_info_label {
-    margin-bottom: 10px;
-    margin-top: 5px;
-    /* WHY ARE THESE ACTING LIKE THEY ARE IN FIXED POSITION? OVERLAPPING OTHER H2s???? 
-       bc h2 rules below?? gotta make sure thats why. i think thats true bc thats how
-       css works!!!
-    */
 }
 
 .player_info {
@@ -96,8 +87,9 @@ hr {
 
 #jersey_num_heading {
     font-family: 'Graduate', monospace;
+    /* different font??!!??! */
     font-size: 2.5em;
-    font-style: italic;
+    font-style: initial;
 }
 
 #team_logo {
@@ -109,6 +101,18 @@ hr {
     width: 300px;
     height: 218px;
     /* MAKE EVERYTHING BIGGER? INCLUDING FONTS ETC! */
+}
+
+#player_info_item {
+    text-align: center;
+    margin-top: 40px;
+    background-color: lightgray;
+}
+
+#info_subgrid {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px 200px 200px;
 }
 
 #season_stats {
@@ -129,7 +133,6 @@ hr {
 
 #career_stats {
     text-align: center;
-    margin-top: 40px;
     background-color: lightgray;
 }
 

@@ -157,6 +157,7 @@ function displayPlayerContent(result_obj, opened_window) {
     // display stuff
     opened_window.document.getElementById("player_photo").src = headShotUrl;
     opened_window.document.getElementById("player_name_heading").innerText = firstName + " " + lastName;
+    opened_window.document.getElementById("jersey_num_heading").innerText = jerseyNumber;
     //opened_window.document.getElementById("player_age").innerText = p_age;
     //opened_window.document.getElementById("player_height").innerText = height;
     //opened_window.document.getElementById("player_position").innerText = position;
