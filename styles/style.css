@@ -42,7 +42,7 @@ hr {
 #grid_container {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    grid-template-rows: 250px 200px 150px;
+    grid-template-rows: 250px 250px 150px;
     padding: 10px;
     gap: 20px;
 }
@@ -107,15 +107,15 @@ hr {
     text-align: center;
     margin-top: 40px;
     background-color: lightgray;
+    /* make this items width exactly half the page so the horizontal grid gap under the player image aligns horizontally */
 }
 
 #info_subgrid {
     display: grid;
-    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px;
     grid-template-rows: 35px 35px 35px;
-    justify-content: center;
-    /* fix horizontal spacing */
-    /* bigger font for items & space in btw items! gap? or adjust margins? */
+    row-gap: 15px;
+    /* bigger font for items */
 }
 
 .player_info_label {
