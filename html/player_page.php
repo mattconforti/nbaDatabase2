@@ -59,16 +59,28 @@
                         <h3 id="player_position" class="player_info_heading"></h3>
                     </div>
                     <div class="info_subgrid_item">
+                        <h3 class="player_info_label">DOB:</h3>
+                    </div>
+                    <div class="info_subgrid_item">
+                        <h3 id="player_dob" class="player_info_heading"></h3>
+                    </div>
+                    <div class="info_subgrid_item">
                         <h3 class="player_info_label">Height:</h3>
                     </div>
                     <div class="info_subgrid_item">
                         <h3 id="player_height" class="player_info_heading"></h3>
                     </div>
                     <div class="info_subgrid_item">
-                        <h3 class="player_info_label">Team:</h3>
+                        <h3 class="player_info_label">Jersey:</h3>
                     </div>
                     <div class="info_subgrid_item">
-                        <h3 id="player_team" class="player_info_heading"></h3>
+                        <h3 id="player_jerseynum" class="player_info_heading"></h3>
+                    </div>
+                    <div class="info_subgrid_item">
+                        <h3 class="player_info_label"></h3>
+                    </div>
+                    <div class="info_subgrid_item">
+                        <h3 class="player_info_heading"></h3>
                     </div>
                     <div class="info_subgrid_item">
                         <h3 class="player_info_label">Weight:</h3>
@@ -77,10 +89,16 @@
                         <h3 id="player_weight" class="player_info_heading"></h3>
                     </div>
                     <div class="info_subgrid_item">
-                        <h3 class="player_info_label">DOB:</h3>
+                        <h3 class="player_info_label">Team:</h3>
                     </div>
                     <div class="info_subgrid_item">
-                        <h3 id="player_dob" class="player_info_heading"></h3>
+                        <h3 id="player_team" class="player_info_heading"></h3>
+                    </div>
+                    <div class="info_subgrid_item">
+                        <h3 class="player_info_label"></h3>
+                    </div>
+                    <div class="info_subgrid_item">
+                        <h3 class="player_info_heading"></h3>
                     </div>
                 </div>      
             </div>
@@ -91,6 +109,9 @@
                     <div class="subgrid2_item">
                         <h3>Season:</h3>
                     </div>
+                    <!-- add the team that this season was played for - and any other stats that can fit season or career.
+                         want to use every single stat the api offers. every single value from every single name in the obj returned.
+                    -->
                     <div class="subgrid2_item">
                         <h3>PTS</h3>
                     </div>

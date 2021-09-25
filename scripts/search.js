@@ -194,6 +194,7 @@ function displayPlayerContent(result_obj, opened_window) {
     opened_window.document.getElementById("player_height").innerText = height;
     opened_window.document.getElementById("player_weight").innerText = weight;
     opened_window.document.getElementById("player_position").innerText = pos_abv[position];
+    opened_window.document.getElementById("player_jerseynum").innerText = jerseyNumber;
     opened_window.document.getElementById("player_team").innerText = team_abv[team];
     opened_window.document.getElementById("player_dob").innerText = dateOfBirth;
     opened_window.document.getElementById("career_pts").innerText = careerPoints;
