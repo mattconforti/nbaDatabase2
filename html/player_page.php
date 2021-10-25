@@ -186,5 +186,9 @@
             <!-- add a section to search by game by entering date - ex. 06/21/21 default text on search input box -->
             <!-- will have to design another screen and or area in the player page to display these results -->
         </div>
+        <?php
+            // include the footer
+            include('../includes/footer.php');
+        ?>
     </body>
 </html>

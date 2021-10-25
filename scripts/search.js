@@ -297,6 +297,8 @@ function updateSeasonsGrid(amt_of_seasons, opened_window) {
     opened_window.document.getElementById("season_stats").style.height = `${35 * (amt_of_seasons + 3)}px`;
     // need to clean up this number a few pixels - decide if i want room around grids inside grid items - how big should
     // the margin really be??
+
+    // NEED TO FIX ISSUE WHERE FOOTER DOESNT GO PAST SEASONS GRID. GOES UNDERNEATH IT!!!
 }
 
 // make 'enter' key trigger search button
