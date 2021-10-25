@@ -24,6 +24,10 @@
         <input id="player_input" type="text" name="player_in">
         <!-- ex. Michael Jordan default (transparent) text inside text input???!!? -->
         <button id="search_button">Search</button>
+        <?php
+            // include the footer
+            include('includes/footer.php');
+        ?>
     </body>
     <script type="text/javascript" src="scripts/search.js"></script>
 </html>
