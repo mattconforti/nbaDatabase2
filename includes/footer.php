@@ -6,6 +6,7 @@
             <h1 id="footer_h1">NBA Database</h1>
         </div>
     </div>
+    <!--
     <div id="contact_menu">
         <div>
             <img class="small_logo" src="/mattsPortfolio/images/gmail_logo.png" alt="gmail_logo">
@@ -20,8 +21,9 @@
             <img class="small_logo" src="/mattsPortfolio/images/youtube_logo.png" alt="youtube_logo">
         </div>
     </div>
+    -->
     <div id="copyright_section">
         <h3 id="copyright_def">&#169; Matthew Conforti 2020</h3>
     </div>
-    <a href="#top">back to top</a>
+    <a id="top_anchor" href="#top">back to top</a>
 </footer>

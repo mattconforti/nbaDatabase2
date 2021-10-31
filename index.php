@@ -20,10 +20,15 @@
             include('includes/header.php');
         ?>
         <hr>
-        <label id="player_label" for="player_in">Search Player:</label>
-        <input id="player_input" type="text" name="player_in">
-        <!-- ex. Michael Jordan default (transparent) text inside text input???!!? -->
-        <button id="search_button">Search</button>
+        <div id="search_div_container">
+            <div id="search_div">
+                <input id="player_input" type="text" name="player_in">
+                <!-- ex. Michael Jordan default (transparent) text inside text input???!!? -->
+                <button id="search_button">
+                    <img id="search_icon" src="images/search_icon.png" alt="search button icon">
+                </button>
+            </div>
+        </div>
         <?php
             // include the footer
             include('includes/footer.php');
