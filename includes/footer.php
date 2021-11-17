@@ -1,5 +1,5 @@
 <footer id="page_footer">
-    <hr>
+    <hr id="footer_hr">
     <div id="footer_heading">
         <div id="footer_h_wrapper">
             <img id="footer_nba_logo" src="/nbaDatabase/images/nba_logo.png" alt="NBA Logo">

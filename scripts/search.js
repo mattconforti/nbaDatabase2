@@ -1,7 +1,15 @@
+// ORGANIZE THIS FILE BETTER & COMMENTS/DOCUMENTATION/DOCSTRINGS?? - JSDOC??!??
+
+/*
+let circleLoader = document.getElementById("circle_loader");
+circleLoader.style.display = "none"; 
+*/
+/* visibility hidden vs display none - depends on if u want space allocated */
+
 var input_field = document.getElementById("player_input");
 var search_button = document.getElementById("search_button");
 
-// position abbreviations
+// abbreviations
 const pos_abv = {
     "Point Guard": "PG",
     "Shooting Guard": "SG",
@@ -49,19 +57,11 @@ var nba_player = {
     "age" : 0,
     "position" : ""
     // NEED MORE & STUFF PUT INTO CATEGORIES
-    // THEN A BUNCH OF THESE PLAYER OBJECTS WILL DEFINE A TEAM OBJECT
+    // THEN A BUNCH OF THESE PLAYER OBJECTS WILL DEFINE A TEAM OBJECT & THEN TEAMS DEFINE LEAGUE OBJECT
     // DO I REALLY NEED THIS FORMATTED THE WAY I WANT? API results contain an obj just like this!!
+    // *** NOT USING FOR NOW BC NOT STORING THIS INFO. API has all the results i need formatted easily accessible
+    // if i use destructuring etc
 }
-
-// empty nba_team object
-var nba_team = {
-
-};
-
-// empty league object
-var nba_league = {
-
-};
 
 function getPlayer(search_term) {
     /* need a better API with more stats & ideally photos etc. no pricing plan or request limit. 
@@ -129,7 +129,8 @@ function getPlayer(search_term) {
                     // get each season for players & display season stats
                     // grid needs to be dynamic to add for more rows (seasons) based on player
                     getSeasons(player_id, player_window);
-                    // displaySeasons is inside this above function ^^
+                    // displaySeasons is inside this above function ^^ handles updating rows & grid size
+                    // **** UPDATE FOOTER BC SEASONS GRID NOW OVERFLOWS **** done upon updating seasons grid size
                 };
             }
         }
@@ -243,6 +244,7 @@ function getSeasons(player_ID, opened_window) {
     });
 }
 
+// used in getSeasons. gets & displays in one function call
 function displaySeasons(result_object, opened_window) {
     const career_length = result_object.length;
     console.log("Career Length: " + career_length + " years");  // exception for Melo b/c 2 2010-11 seasons
@@ -256,6 +258,7 @@ function displaySeasons(result_object, opened_window) {
     }
 }
 
+// used in displaySeasons function
 function createRow(season_obj, opened_window) {
     // define subgrid to be added to
     var subgrid2_container = opened_window.document.getElementById("subgrid_container2");
@@ -289,6 +292,7 @@ function createRow(season_obj, opened_window) {
     console.log(opened_window.document);
 }
 
+// used in displaySeasons function. also updates footer to account for seasons grid
 function updateSeasonsGrid(amt_of_seasons, opened_window) {
     // update amount of rows in season stats grid
     opened_window.document.getElementById("subgrid_container2").style.gridTemplateRows = `repeat(${amt_of_seasons + 1}, 35px)`;
@@ -298,7 +302,18 @@ function updateSeasonsGrid(amt_of_seasons, opened_window) {
     // need to clean up this number a few pixels - decide if i want room around grids inside grid items - how big should
     // the margin really be??
 
-    // NEED TO FIX ISSUE WHERE FOOTER DOESNT GO PAST SEASONS GRID. GOES UNDERNEATH IT!!!
+    // FIX FOOTER OVERFLOW ISSUE
+    opened_window.document.getElementById("footer_hr").style.marginTop = `${(35 * (amt_of_seasons + 3)) - 60}px`;
+    console.log(opened_window.document.getElementById("footer_hr").style.marginTop);
+    // wayy too much?? why?? maybe something with default margins already set?? idk. look in your css code & alter
+    // maybe bc hr already has 25px margin top added for spacing in my css. ill subtract 25 & see if it helps.
+    // ^^ this is pretty solid. but need maybe a little less off. looks good with not a lot of seasons. looks bad
+    //  with a lot of seasons. maybe try to match the exact margin as the first page. or have that one be sized out
+    // more to be like this... MAKE IT A LITTLE LESS ON PLAYER PAGE AND THEN ADD TO REGULAR ONE TO MATCH!! can just have
+    // it sized out nicely from the beginning since this wont change based on amt_of_seasons. but need it more spaced
+    // out & index page spaced out & aesthetics better in general. circle loading animation will help. put it below
+    // vertically?? page needs some verticality!! maybe show a small pic of a player card. NEED TO ADD SHADOWS LIKE CARDS
+    // ON THE PLAYER PAGE!!!!!
 }
 
 // make 'enter' key trigger search button

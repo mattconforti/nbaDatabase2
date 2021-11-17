@@ -79,15 +79,17 @@ hr {
 }
 
 #search_div {
-    width: 75%;
+    width: 100%;
     padding-top: 75px;
-    padding-left: 10%;
+    padding-left: 20%;
+    /* FIX HORIZONTAL ALIGNMENT OF STUFF ON HOME PAGE. NO GUESS & CHECK. CALCULATIONS. */
+    /* MAKE SURE EVERYTHING STAYS ALIGNED WHILE RESIZING.
+       HAVE TO BRUSH UP ON HOW TO DO THIS MORE EFFECTIVELY */
     margin: 0 auto;
     /* perfectly horizontally aligned?? */
 }
 
 #player_input {
-    margin-left: 10px;
     font-size: 1.125em;
 }
 
@@ -101,6 +103,23 @@ hr {
     height: 15px;
     margin-top: 1px;
     margin-bottom: -2px;
+}
+
+#circle_loader {
+    display: inline-block;  /* bc div defaults to block elem & moves to new line */
+    border: 6px solid #b6e7b8; /* light green circle - make more grey/light like 
+    the blue/lavender combo of the last spinner */
+    border-top: 6px solid limegreen; /* green spinner */
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    animation: spin 825ms linear infinite;
+    margin-left: 35px;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 #grid_container {
