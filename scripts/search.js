@@ -1,9 +1,7 @@
 // ORGANIZE THIS FILE BETTER & COMMENTS/DOCUMENTATION/DOCSTRINGS?? - JSDOC??!??
 
-/*
-let circleLoader = document.getElementById("circle_loader");
-circleLoader.style.display = "none"; 
-*/
+let c_loader = document.getElementById("circle_loader");
+c_loader.style.visibility = "hidden";
 /* visibility hidden vs display none - depends on if u want space allocated */
 
 var input_field = document.getElementById("player_input");
@@ -63,6 +61,9 @@ var nba_player = {
     // if i use destructuring etc
 }
 
+// ****************************************************************************************************************
+// ******************************************  MAIN FUNCTION  *****************************************************
+// ****************************************************************************************************************
 function getPlayer(search_term) {
     /* need a better API with more stats & ideally photos etc. no pricing plan or request limit. 
        will buy pricing plan if i eventually publish the website & somehow make money off it - maybe by 
@@ -99,7 +100,7 @@ function getPlayer(search_term) {
 		"x-rapidapi-key": "3683bd61dfmshd234785dbb9d5bep1253d9jsn5a556f7f2e21"
 	}
     })
-    .then(response => response.json())
+    .then(response => response.json())  // have to check if (response.status === 200) or catch will auto handle??
     .then(responseJSON => {
         console.log(responseJSON);
 
@@ -206,19 +207,6 @@ function displayPlayerContent(result_obj, opened_window) {
     opened_window.document.getElementById("career_3pp").innerText = careerPercentageThree;
 }
 
-// click the search button
-search_button.addEventListener('click', () => {
-    var player_name = input_field.value;
-    // DO INPUT VALIDATION HERE... OR WHEN USER CLICKS OUT OF INPUT FIELD?? STRAT?
-    console.log(`Search Term: ${player_name}`);
-
-    // CIRCLE LOADER BEFORE API CALL for UX - lets them know something computational
-    // & time consuming is being done
-
-    // API call
-    getPlayer(player_name);
-});
-
 function getSeasons(player_ID, opened_window) {
     // do this & then extract individual seasons into objects
     fetch(`https://nba-player-individual-stats.p.rapidapi.com/playerseasons?playerId=${player_ID}`, {
@@ -315,6 +303,30 @@ function updateSeasonsGrid(amt_of_seasons, opened_window) {
     // vertically?? page needs some verticality!! maybe show a small pic of a player card. NEED TO ADD SHADOWS LIKE CARDS
     // ON THE PLAYER PAGE!!!!!
 }
+
+// ****************************************************************************************************************
+// *************************************  SEARCH BUTTON CLICK  ****************************************************
+// ****************************************************************************************************************
+search_button.addEventListener('click', () => {
+    var player_name = input_field.value;
+    // DO INPUT VALIDATION HERE... OR WHEN USER CLICKS OUT OF INPUT FIELD?? STRAT?
+    console.log(`Search Term: ${player_name}`);
+
+    // CIRCLE LOADER BEFORE API CALL for UX - lets them know something computational
+    // & time consuming is being done
+
+    // show the loading indicator
+    c_loader.style.visibility = "visible";
+
+    // do the work on a delay to let the loading indicator animation run
+    setTimeout(() => {
+        // API call & all display work
+        getPlayer(player_name);
+
+        // the work is done, hide the loading indicator
+        c_loader.style.visibility = "hidden";
+    }, 1750);
+});
 
 // make 'enter' key trigger search button
 // consistency on single or double quotes!! & other conventions like camelcase or underscore etc

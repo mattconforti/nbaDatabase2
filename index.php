@@ -27,7 +27,9 @@
                 <button id="search_button">
                     <img id="search_icon" src="images/search_icon.png" alt="search button icon">
                 </button>
-                <div id="circle_loader"></div>
+                <div id="loader_wrapper">
+                    <div id="circle_loader"></div>
+                </div>
             </div>
         </div>
         <?php
