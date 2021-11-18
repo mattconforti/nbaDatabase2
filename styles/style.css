@@ -50,6 +50,7 @@ h1 {
     font-size: 25px;
     letter-spacing: -1px;
     width: initial;
+    /* NOT PERFECTLY HORIZONTALLY CENTERED! MOVE IT OVER!! */
 }
 
 #copyright_section {
@@ -80,7 +81,7 @@ hr {
 
 #search_div {
     width: 100%;
-    padding-top: 75px;
+    height: 200px;
     padding-left: 20%;
     /* FIX HORIZONTAL ALIGNMENT OF STUFF ON HOME PAGE. NO GUESS & CHECK. CALCULATIONS. */
     /* MAKE SURE EVERYTHING STAYS ALIGNED WHILE RESIZING.
@@ -105,16 +106,23 @@ hr {
     margin-bottom: -2px;
 }
 
-#circle_loader {
+#loader_wrapper {
     display: inline-block;  /* bc div defaults to block elem & moves to new line */
-    border: 6px solid #b6e7b8; /* light green circle - make more grey/light like 
+    padding: 10px;
+    position: relative;
+    top: 30px;
+    left: 20px;
+    margin-top: 25px;  /* vertically offset the entire input box button & loader */
+}
+
+#circle_loader {
+    border: 10px solid #b6e7b8; /* light green circle - make more grey/light like 
     the blue/lavender combo of the last spinner */
-    border-top: 6px solid limegreen; /* green spinner */
+    border-top: 10px solid limegreen; /* green spinner */
     border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    animation: spin 825ms linear infinite;
-    margin-left: 35px;
+    width: 30px;
+    height: 30px;
+    animation: spin 800ms linear infinite; /* FASTER?? */
 }
   
 @keyframes spin {
@@ -173,6 +181,7 @@ hr {
     /* different font??!!??! */
     font-size: 2.5em;
     font-style: initial;
+    /* MOVE THIS DOWN A BIT?? TOO CLOSE TO NAME ON PLAYER PAGE */
 }
 
 #team_logo {
