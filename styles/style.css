@@ -116,13 +116,13 @@ hr {
 }
 
 #circle_loader {
-    border: 10px solid #b6e7b8; /* light green circle - make more grey/light like 
-    the blue/lavender combo of the last spinner */
+    border: 10px solid #efffe0; /* light green circle - make more grey/light like
+    the blue/lavender combo of the last spinner. idk i keep trying colors and none of them are perfect */
     border-top: 10px solid limegreen; /* green spinner */
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    animation: spin 800ms linear infinite; /* FASTER?? */
+    animation: spin 600ms linear infinite; /* FASTER?? */
 }
   
 @keyframes spin {

@@ -325,7 +325,7 @@ search_button.addEventListener('click', () => {
 
         // the work is done, hide the loading indicator
         c_loader.style.visibility = "hidden";
-    }, 1750);
+    }, 2000);
 });
 
 // make 'enter' key trigger search button
