@@ -290,9 +290,11 @@ function updateSeasonsGrid(amt_of_seasons, opened_window) {
     // need to clean up this number a few pixels - decide if i want room around grids inside grid items - how big should
     // the margin really be??
 
-    // FIX FOOTER OVERFLOW ISSUE
+    // FIX FOOTER OVERFLOW ISSUE - could use document.height or outerHeight but just gunna do it based on amt of seasons
+    // SHOULD JUST BE A FIXED THING!!!? MAX AMOUNT OF SEAONS SHOULD BE LIKE 25. VC longest career ever was 22 seasons.
     opened_window.document.getElementById("footer_hr").style.marginTop = `${(35 * (amt_of_seasons + 3)) - 60}px`;
     console.log(opened_window.document.getElementById("footer_hr").style.marginTop);
+    console.log(opened_window.document.documentElement.scrollHeight);
     // wayy too much?? why?? maybe something with default margins already set?? idk. look in your css code & alter
     // maybe bc hr already has 25px margin top added for spacing in my css. ill subtract 25 & see if it helps.
     // ^^ this is pretty solid. but need maybe a little less off. looks good with not a lot of seasons. looks bad
@@ -309,11 +311,12 @@ function updateSeasonsGrid(amt_of_seasons, opened_window) {
 // ****************************************************************************************************************
 search_button.addEventListener('click', () => {
     var player_name = input_field.value;
-    // DO INPUT VALIDATION HERE... OR WHEN USER CLICKS OUT OF INPUT FIELD?? STRAT?
+    // DO INPUT VALIDATION HERE... OR WHEN USER CLICKS OUT OF INPUT FIELD?? STRAT? when user clicks out of input. (blur)
     console.log(`Search Term: ${player_name}`);
 
     // CIRCLE LOADER BEFORE API CALL for UX - lets them know something computational
     // & time consuming is being done
+    // ******* ONLY SHOW LOADING INDICATOR IF INPUT IS VALID *******
 
     // show the loading indicator
     c_loader.style.visibility = "visible";
@@ -325,7 +328,7 @@ search_button.addEventListener('click', () => {
 
         // the work is done, hide the loading indicator
         c_loader.style.visibility = "hidden";
-    }, 2000);
+    }, 2100);
 });
 
 // make 'enter' key trigger search button
