@@ -21,7 +21,7 @@
         ?>
         <hr>
         <!-- grid here -->
-        <div id="grid_container">
+        <div id="grid_container"> <!-- FIX COLUMNS IN CSS TO BE EXACTLY 50/50 aligned underneat the player image!! -->
             <div id="player_item" class="grid_item">
                 <div id="subgrid_container">
                     <div id="team_info" class="subgrid_item">

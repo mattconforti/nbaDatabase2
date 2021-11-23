@@ -27,6 +27,10 @@ h1 {
     text-align: center;
 }
 
+#footer_hr {
+    margin-top: 300px;
+}
+
 #footer_heading {
     width: 100%;
     margin-top: -10px;
@@ -42,6 +46,9 @@ h1 {
     float: left;
     width: 30px;
     height: 66px;
+    margin-left: 7px;
+    /* fixed horizontal spacing. MAKE SURE RESIZES CORRECTLY & MOBILE LOOKS GOOD */
+    /* USE PERCENTAGES TO DO THIS!!!!!!!! */
 }
 
 #footer_h1 {
@@ -50,7 +57,6 @@ h1 {
     font-size: 25px;
     letter-spacing: -1px;
     width: initial;
-    /* NOT PERFECTLY HORIZONTALLY CENTERED! MOVE IT OVER!! */
 }
 
 #copyright_section {
@@ -87,11 +93,17 @@ hr {
     /* MAKE SURE EVERYTHING STAYS ALIGNED WHILE RESIZING.
        HAVE TO BRUSH UP ON HOW TO DO THIS MORE EFFECTIVELY */
     margin: 0 auto;
-    /* perfectly horizontally aligned?? */
+    /* perfectly horizontally aligned?? NOT REALLY NEED TO MOVE LEFT A FEW PIXELS. ESPECIALLY FIX
+       ALIGNMENT WHILE RESIZING!!!! BC OF PERCENTAGES??? NEED MORE CONSISTENT UNITS!!
+    */
 }
 
 #player_input {
     font-size: 1.125em;
+}
+
+#player_input::placeholder {
+    font-style: italic;
 }
 
 #search_button {
@@ -116,13 +128,13 @@ hr {
 }
 
 #circle_loader {
-    border: 10px solid #efffe0; /* light green circle - make more grey/light like
+    border: 10px solid #efefef; /* light green circle - make more grey/light like
     the blue/lavender combo of the last spinner. idk i keep trying colors and none of them are perfect */
     border-top: 10px solid limegreen; /* green spinner */
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    animation: spin 600ms linear infinite; /* FASTER?? */
+    animation: spin 600ms linear infinite;
 }
   
 @keyframes spin {

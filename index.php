@@ -22,7 +22,10 @@
         <hr>
         <div id="search_div_container">
             <div id="search_div">
-                <input id="player_input" type="text" name="player_in">
+                <!-- use <input type="search"> ?? for field designed for search queries.
+                     may be styled differently than text inputs.. ? what does this mean??
+                -->
+                <input id="player_input" type="text" name="player_in" placeholder="Player Name">
                 <!-- ex. Michael Jordan default (transparent) text inside text input???!!? -->
                 <button id="search_button">
                     <img id="search_icon" src="images/search_icon.png" alt="search button icon">
