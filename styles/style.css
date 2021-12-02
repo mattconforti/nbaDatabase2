@@ -28,7 +28,8 @@ h1 {
 }
 
 #footer_hr {
-    margin-top: 300px;
+    margin-top: 75px;
+    /* SHOULD BE ABLE TO SEE FOOTER ON PAGE IF CONTENT IS NOT SCROLLABLE (not more content than the window size) */
 }
 
 #footer_heading {
@@ -100,10 +101,7 @@ hr {
 
 #player_input {
     font-size: 1.125em;
-}
-
-#player_input::placeholder {
-    font-style: italic;
+    padding-left: 3px;
 }
 
 #search_button {

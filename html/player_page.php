@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- make sizes dynamic & good for mobile!!! percentages of screen or media queries. -->
         <!-- search - "responsive mobile design using" on Google. -->
-        <title>Player View</title>
+        <title>NBA Database - Player View</title>
         <!-- get player name above? using php maybe?? or just js?? -->
         <!-- Google Font API -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
