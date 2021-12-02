@@ -290,18 +290,17 @@ function updateSeasonsGrid(amt_of_seasons, opened_window) {
     // need to clean up this number a few pixels - decide if i want room around grids inside grid items - how big should
     // the margin really be??
 
-    // FIX FOOTER OVERFLOW ISSUE - could use document.height or outerHeight but just gunna do it based on amt of seasons
-    // SHOULD JUST BE A FIXED THING!!!? MAX AMOUNT OF SEAONS SHOULD BE LIKE 25. VC longest career ever was 22 seasons.
-    opened_window.document.getElementById("footer_hr").style.marginTop = `${(35 * (amt_of_seasons + 3)) - 60}px`;
-    console.log(opened_window.document.getElementById("footer_hr").style.marginTop);
-    console.log(opened_window.document.documentElement.scrollHeight);
-    // wayy too much?? why?? maybe something with default margins already set?? idk. look in your css code & alter
-    // maybe bc hr already has 25px margin top added for spacing in my css. ill subtract 25 & see if it helps.
-    // ^^ this is pretty solid. but need maybe a little less off. looks good with not a lot of seasons. looks bad
-    //  with a lot of seasons. maybe try to match the exact margin as the first page. or have that one be sized out
-    // more to be like this... MAKE IT A LITTLE LESS ON PLAYER PAGE AND THEN ADD TO REGULAR ONE TO MATCH!! can just have
-    // it sized out nicely from the beginning since this wont change based on amt_of_seasons. but need it more spaced
-    // out & index page spaced out & aesthetics better in general. circle loading animation will help. put it below
+
+    // FIX FOOTER OVERFLOW ISSUE
+    if (amt_of_seasons > 8) {
+        opened_window.document.getElementById("footer_hr").style.marginTop = `${35 * (amt_of_seasons + 3) - 300}px`;
+        console.log(opened_window.document.getElementById("footer_hr").style.marginTop);
+    }
+    else {  // redundant????? bc its already 75 by default so shouldnt have to change it unless its above 8 seasons
+        opened_window.document.getElementById("footer_hr").style.marginTop = '75px';
+    }
+
+    // need index page spaced out & aesthetics better in general. circle loading animation will help. put it below
     // vertically?? page needs some verticality!! maybe show a small pic of a player card. NEED TO ADD SHADOWS LIKE CARDS
     // ON THE PLAYER PAGE!!!!!
 }
