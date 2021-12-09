@@ -3,3 +3,5 @@
     <h1>NBA Database</h1>
     <!-- some type of menu here?? - need space filled & nav menu can be useful -->
 </header>
+
+<!-- MAKE CLICKING ON THE HEADER TAKE U TO THE HOME PAGE!!!! especially on player page -->

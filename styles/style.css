@@ -132,7 +132,7 @@ hr {
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    animation: spin 600ms linear infinite;
+    animation: spin 500ms linear infinite;
 }
   
 @keyframes spin {
