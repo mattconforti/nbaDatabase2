@@ -293,7 +293,7 @@ function updateSeasonsGrid(amt_of_seasons, opened_window) {
 
     // FIX FOOTER OVERFLOW ISSUE
     if (amt_of_seasons > 8) {
-        opened_window.document.getElementById("footer_hr").style.marginTop = `${35 * (amt_of_seasons + 3) - 300}px`;
+        opened_window.document.getElementById("footer_hr").style.marginTop = `${(35 * (amt_of_seasons + 3)) - 300}px`;
         console.log(opened_window.document.getElementById("footer_hr").style.marginTop);
     }
     else {  // redundant????? bc its already 75 by default so shouldnt have to change it unless its above 8 seasons
@@ -327,7 +327,7 @@ search_button.addEventListener('click', () => {
 
         // the work is done, hide the loading indicator
         c_loader.style.visibility = "hidden";
-    }, 2100);
+    }, 1750);
 });
 
 // make 'enter' key trigger search button
