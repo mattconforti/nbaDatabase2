@@ -1,3 +1,11 @@
+<!-- not for financial gain. education purposes only. self education on web development.
+     licenses?? dont need if im not selling and im the only one consuming this for rn.
+-->
+
+<!-- DERRICK ROSE PRESENTS A BUG WHERE THERE IS 2020-2021 STATS IN 2 diff rows!!! DUPLICATE DATA! CHECK ACTUAL API RESULTS.
+OR DOING SOMETHING FUNNY IN MY JS CODE IF THERE ARE 2 ROWS
+-->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,6 +35,7 @@
                 -->
                 <input id="player_input" type="text" name="player_in" placeholder="Player Name">
                 <!-- ex. Michael Jordan default (transparent) text inside text input???!!? -->
+                <!-- NEEED MORE INPUT/FORM VALIDATION BEFORE MAKING SITE PUBLIC!!!!!!!! wanna have a secure unhackable site!-->
                 <button id="search_button">
                     <img id="search_icon" src="images/search_icon.png" alt="search button icon">
                 </button>

@@ -310,3 +310,35 @@ h3 {
 .subgrid3_item {
     border: 1px solid black;
 }
+
+#cs1 {
+    float: none;
+    font-family: 'Teko', cursive;
+    font-size: 4em;
+    margin-left: 37%;
+    display: block;
+    margin-bottom: 15px;
+}
+
+#cs2 {
+    float: none;
+    display: block;
+    margin-left: 40%;
+}
+
+#cs3 {
+    float: none;
+    display: block;
+    margin-left: 33%;
+}
+
+#construction_tape_img1 {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#construction_tape_img2 {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: -25px;
+}
