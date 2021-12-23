@@ -320,6 +320,18 @@ h3 {
     margin-bottom: 15px;
 }
 
+/* 'BREAKPOINT' for smartphones, iphone. IN REALITY NEED "MOBILE FIRST" DESIGN. 
+    DESIGN 4 SMALLER SCREENS FIRST. WORK UR WAY UP VIEWPORT SIZES & NOTE WHERE LAYOUT FAILS & WRITE MEDIA QUERY FOR THAT.
+    REPEAT UNTIL NEXT BREAKPOINT. USE RESPONSIVEPX.COM TO FIND NATURAL BREAKPOINTS. READ MORE ABOUT THIS.
+    https://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile
+    2nd answer ^^ review all answers but i think 2nd answer is a good summation of all & a good general method
+*/
+@media (min-width:320px) {
+    #cs1 {
+        margin-left: 17%;
+    }
+}
+
 #cs2 {
     float: none;
     display: block;
