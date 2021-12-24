@@ -328,7 +328,14 @@ h3 {
 */
 @media (min-width:320px) {
     #cs1 {
-        margin-left: 17%;
+        margin-left: 12%; 
+        /* arbitrary #. need to find out exact in terms of how many pixels we need & then turn that into %.*/
+    }
+    #cs2 {
+        margin-left: 14%;
+    }
+    #cs3 {
+        margin-left: 7%;
     }
 }
 
