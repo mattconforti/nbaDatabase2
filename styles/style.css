@@ -326,18 +326,27 @@ h3 {
     https://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile
     2nd answer ^^ review all answers but i think 2nd answer is a good summation of all & a good general method
 */
-@media (min-width:320px) {
+@media (min-width:320px) { /* NEED MORE FOR BIGGER SCREEN SIZES. doing mobile first design so using min-width and working my way up */
     #cs1 {
-        margin-left: 12%; 
+        margin-left: 10%; 
         /* arbitrary #. need to find out exact in terms of how many pixels we need & then turn that into %.*/
     }
     #cs2 {
-        margin-left: 14%;
+        margin-left: 11%;
     }
     #cs3 {
-        margin-left: 7%;
+        margin-left: 4%;
     }
 }
+
+/* ************** NOTE **************** */
+/* NEED TO WORK MY WAY UP IN PIXELS WITH THIS MIN WIDTH FOR BIGGER SCREENS LIKE TABLETS & LAPTOPS! */
+/* THE MIN WIDTH BECAUSE ITS MIN IS NOW EFFECTING THE LAPTOP SCREEN. I DIDNT THINK IT WOULD BECAUSE I HAVE
+   REGULAR RULE ABOUT IT, BUT I DIDNT THINK ABOUT THE MINvsMAXwidth THING TOO HARD. BUT THIS SITUATION WOULD NOT HAVE
+   HAPPENED IN THIS WAY IF I DID MOBILE FIRST DEVELOPMENT. BIG SCREEN WOULD STILL BE MESSED UP AT THIS POINT. BUT IT 
+   WOULD HAVE NEVER BEEN ON POINT IN THE FIRST PLACE. IT SEEMS WEIRD BECAUSE I HAD IT CORRECT FIRST, THEN THE MEDIA QUERY
+   FUCKED IT UP. ALLG I KNOW I HAVE TO ADD MEDIA QUERY FOR BIGGER BREAKPOINT WHERE STYLES BREAK ANYWAY.
+*/
 
 #cs2 {
     float: none;
