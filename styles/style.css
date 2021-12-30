@@ -326,16 +326,26 @@ h3 {
     https://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile
     2nd answer ^^ review all answers but i think 2nd answer is a good summation of all & a good general method
 */
-@media (min-width:320px) { /* NEED MORE FOR BIGGER SCREEN SIZES. doing mobile first design so using min-width and working my way up */
+@media (min-width:320px) { /* NEED MORE FOR BIGGER SCREEN SIZES. try mobile first design so using min-width & working way up */
     #cs1 {
         margin-left: 10%; 
         /* arbitrary #. need to find out exact in terms of how many pixels we need & then turn that into %.*/
     }
     #cs2 {
-        margin-left: 11%;
+        margin-left: -70%;  /* NOTE WANT TO CHANGE EVERYTHING TO VH AND VW SO RESIZES ACCORDING TO VIEWPORT WIDTH/HEIGHT */
     }
     #cs3 {
-        margin-left: 4%;
+        margin-left: -50%;
+    }
+    #header_h1 {
+        font-size: 40px;
+        width: 75%;
+        margin-left: 10px;
+    }
+    #nba_logo {
+        width: 30px;
+        height: 67px;
+        margin-left: 10px;
     }
 }
 
