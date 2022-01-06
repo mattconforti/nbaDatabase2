@@ -2,7 +2,7 @@
     <hr id="footer_hr">
     <div id="footer_heading">
         <div id="footer_h_wrapper">
-            <img id="footer_nba_logo" src="../images/nba_logo.png" alt="NBA Logo">
+            <img id="footer_nba_logo" src="/nbaDatabase/images/nba_logo.png" alt="NBA Logo">
             <h1 id="footer_h1">NBA Database</h1>
         </div>
     </div>
