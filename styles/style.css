@@ -320,49 +320,6 @@ h3 {
     margin-bottom: 15px;
 }
 
-/* 'BREAKPOINT' for smartphones, iphone. IN REALITY NEED "MOBILE FIRST" DESIGN. 
-    DESIGN 4 SMALLER SCREENS FIRST. WORK UR WAY UP VIEWPORT SIZES & NOTE WHERE LAYOUT FAILS & WRITE MEDIA QUERY FOR THAT.
-    REPEAT UNTIL NEXT BREAKPOINT. USE RESPONSIVEPX.COM TO FIND NATURAL BREAKPOINTS. READ MORE ABOUT THIS.
-    https://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile
-    2nd answer ^^ review all answers but i think 2nd answer is a good summation of all & a good general method
-*/
-
-/*WHY DOES MY PAGE ON MOBILE ALLOW U TO GO RIGHT MORE THAN THE PAGE WIDTH IS????*/
-/*
-@media (min-width:320px) {
-    #cs1 {
-        margin-left: 8%; 
-    }
-    #cs2 {
-        margin-left: -70%;
-    }
-    #cs3 {
-        margin-left: -50%;
-    }
-    #header_h1 {
-        font-size: 40px;
-        width: 75%;
-        margin-top: 33px;
-    }
-    #nba_logo {
-        width: 30px;
-        height: 67px;
-        margin-top: 29px;
-        margin-bottom: 29px;
-    }
-}
-*/
-/* IN HEADER BOTTOM MARGIN TO HR NEEDS TO BE SMALLER. DIDNT EFFECT PAGE RIGHT BY ALTERING THIS */
-
-/* ************** NOTE **************** */
-/* NEED TO WORK MY WAY UP IN PIXELS WITH THIS MIN WIDTH FOR BIGGER SCREENS LIKE TABLETS & LAPTOPS! */
-/* THE MIN WIDTH BECAUSE ITS MIN IS NOW EFFECTING THE LAPTOP SCREEN. I DIDNT THINK IT WOULD BECAUSE I HAVE
-   REGULAR RULE ABOUT IT, BUT I DIDNT THINK ABOUT THE MINvsMAXwidth THING TOO HARD. BUT THIS SITUATION WOULD NOT HAVE
-   HAPPENED IN THIS WAY IF I DID MOBILE FIRST DEVELOPMENT. BIG SCREEN WOULD STILL BE MESSED UP AT THIS POINT. BUT IT 
-   WOULD HAVE NEVER BEEN ON POINT IN THE FIRST PLACE. IT SEEMS WEIRD BECAUSE I HAD IT CORRECT FIRST, THEN THE MEDIA QUERY
-   FUCKED IT UP. ALLG I KNOW I HAVE TO ADD MEDIA QUERY FOR BIGGER BREAKPOINT WHERE STYLES BREAK ANYWAY.
-*/
-
 #cs2 {
     float: none;
     display: block;
@@ -386,8 +343,51 @@ h3 {
     margin-bottom: -25px;
 }
 
-/* USE POSITION RELATIVE TO KEEP THINGS CENTERED WHILE RESIZING?? FLEX DOES THIS TOO BUT... */
-/* ORRR OTHER OPTIONS... WOULD MEDIA QUERIES HELP WITH THIS? OTHER STRATEGIES TO KEEP TEXT CENTERED WHILER RESIZING? 
-   DIFF UNITS THAT RESPOND TO PAGE SIZE?? IG CODER USES THEM I FORGET WHAT THEY ARE. LOOK UP!! */
+/* 'BREAKPOINT' for smartphones, iphone. IN REALITY NEED "MOBILE FIRST" DESIGN. 
+    DESIGN 4 SMALLER SCREENS FIRST. WORK UR WAY UP VIEWPORT SIZES & NOTE WHERE LAYOUT FAILS & WRITE MEDIA QUERY FOR THAT.
+    REPEAT UNTIL NEXT BREAKPOINT. USE RESPONSIVEPX.COM TO FIND NATURAL BREAKPOINTS. READ MORE ABOUT THIS.
+    https://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile
+    2nd answer ^^ review all answers but i think 2nd answer is a good summation of all & a good general method
+*/
 
-/* GOING TO USE MEDIA QUERIES...! READING AND RESEARCHING AS WE SPEAK!!!!!!!!!!! GUNNA IMPLEMENT WITHIN NEXT DAY OR SO */
+/*WHY DOES MY PAGE ON MOBILE ALLOW U TO GO RIGHT MORE THAN THE PAGE WIDTH IS????*/
+@media (min-width:320px) {
+    #cs1 {
+        margin-top: 3vh;
+        margin-left: 6%; 
+        margin-bottom: 2vh;
+    }
+    #cs2 {
+        margin-left: 14vw;
+        margin-bottom: 4vh;
+    }
+    #cs3 {
+        margin-top: 2vh;
+        margin-left: 5vw;
+        margin-bottom: 2vh;
+    }
+    #cs4 {
+        margin-left: 33vw;
+    }
+    #header_h1 {
+        font-size: 40px;
+        width: 75%;
+        margin-top: 38px;
+    }
+    #nba_logo {
+        width: 30px;
+        height: 67px;
+        margin-top: 29px;
+        margin-bottom: 29px;
+    }
+}
+/* IN HEADER BOTTOM MARGIN TO HR NEEDS TO BE SMALLER. DIDNT EFFECT PAGE RIGHT BY ALTERING THIS */
+
+/* ************** NOTE **************** */
+/* NEED TO WORK MY WAY UP IN PIXELS WITH THIS MIN WIDTH FOR BIGGER SCREENS LIKE TABLETS & LAPTOPS! */
+/* THE MIN WIDTH BECAUSE ITS MIN IS NOW EFFECTING THE LAPTOP SCREEN. I DIDNT THINK IT WOULD BECAUSE I HAVE
+   REGULAR RULE ABOUT IT, BUT I DIDNT THINK ABOUT THE MINvsMAXwidth THING TOO HARD. BUT THIS SITUATION WOULD NOT HAVE
+   HAPPENED IN THIS WAY IF I DID MOBILE FIRST DEVELOPMENT. BIG SCREEN WOULD STILL BE MESSED UP AT THIS POINT. BUT IT 
+   WOULD HAVE NEVER BEEN ON POINT IN THE FIRST PLACE. IT SEEMS WEIRD BECAUSE I HAD IT CORRECT FIRST, THEN THE MEDIA QUERY
+   FUCKED IT UP. ALLG I KNOW I HAVE TO ADD MEDIA QUERY FOR BIGGER BREAKPOINT WHERE STYLES BREAK ANYWAY.
+*/
