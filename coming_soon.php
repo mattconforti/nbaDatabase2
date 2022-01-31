@@ -24,8 +24,8 @@
             <img id="construction_tape_img1" src="images/under_construction_vector.jpg" alt="construction tape image 1">
             <h1 id="cs1">COMING SOON!</h1>
             <h2 id="cs2">Site Under Construction</h2>
-            <h3 id="cs3">Come back shortly to see the unveiling of</h3>
-            <h3 id="cs4">our new site!</h3>
+            <h3 id="cs3">Come back shortly to see the unveiling</h3>
+            <h3 id="cs4">of our new site!</h3>
             <img id="construction_tape_img2" src="images/under_construction_vector.jpg" alt="construction tape image 2">
         </div>
         <?php
