@@ -64,6 +64,7 @@ var nba_player = {
 // ****************************************************************************************************************
 // ******************************************  MAIN FUNCTION  *****************************************************
 // ****************************************************************************************************************
+// envoked by search button click
 function getPlayer(search_term) {
     /* need a better API with more stats & ideally photos etc. no pricing plan or request limit. 
        will buy pricing plan if i eventually publish the website & somehow make money off it - maybe by 
@@ -86,11 +87,19 @@ function getPlayer(search_term) {
          about this asking for full name queries. until then i will search by last name & parse thru the results to find
          desired player
     */
-   // fix indent - only 3 spaces below
+   // turn search term all lowercase so the program does not check terms case sensitive wise. Users should be able to enter it any way
+   search_term = search_term.toLowerCase();
+   console.log ("Lowercase search term: " + search_term);
+
+   // fix indent - only 3 spaces this section not a tab 4 like i usually use
    let names = search_term.split(' ');
-   // make sure names are first letter uppercase - problem is someone like Lamelo Ball is listed as LaMelo in the db
-   // the code that checks this needs to check against all lowercase first names - last names need to be first letter
-   // capitals for the api query term
+
+   // problem is someone like Lamelo Ball in api db is LaMelo Ball. so need to format user input in way we need it. make check against
+   // all lowercase? the way user enters it shouldnt matter, as long as all letters match regardless of capitalization in any place.
+   // ^^ turn names into lowercase before splitting makes easier & no loop / foreach method/loop etc required.
+   // MAKES IT EASIER ON ME ACTUALLY BC UPON TESTING LAST NAME CAPITALIZATION DOESNT MATTER IN THE API!!!! JUST FIRST NAME CAP MATTERS!
+   // so we just need the extracted first name from API to be all lowercase as well (we lowercased the usr input already) before it 
+   // is checked against the user input.
 
    // they changed the api to make an endpoint that searches by full name. after a comment i made to the creator.
    fetch(`https://nba-player-individual-stats.p.rapidapi.com/players/lastname?lastname=${names[1]}`, {
@@ -107,8 +116,8 @@ function getPlayer(search_term) {
         // loop thru results & match first name (names[0])
         for (let counter = 0; counter < responseJSON.length; counter++) {
             console.log(responseJSON[counter]);
-            // match first name with user input
-            if (responseJSON[counter]["firstName"] === names[0]) {
+            // match (lowercase version) first name with user input
+            if ((responseJSON[counter]["firstName"]).toLowerCase() === names[0]) {
                 console.log("Player match");
                 // necessary to store this exact object? seems like a waste bc just creating another reference to it in memory
 
