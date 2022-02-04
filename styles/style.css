@@ -89,6 +89,7 @@ hr {
     width: 30%;
     height: 200px;
     margin: 0 auto;
+    border: 2px solid red;
 }
 
 #search_div {
@@ -102,11 +103,13 @@ hr {
     /* perfectly horizontally aligned?? NOT REALLY NEED TO MOVE LEFT A FEW PIXELS. ESPECIALLY FIX
        ALIGNMENT WHILE RESIZING!!!! BC OF PERCENTAGES??? NEED MORE CONSISTENT UNITS!!
     */
+    border: 2px solid red;
 }
 
 #player_input {
     font-size: 1.125em;
     padding-left: 3px;
+    border: 2px solid red;
 }
 
 #search_button {
@@ -379,6 +382,10 @@ h3 {
         height: 67px;
         margin-top: 29px;
         margin-bottom: 29px;
+    }
+    /* resize & align & space index.php */
+    #search_div_container {
+        margin-left: 0px;
     }
 }
 /* IN HEADER BOTTOM MARGIN TO HR NEEDS TO BE SMALLER. DIDNT EFFECT PAGE RIGHT BY ALTERING THIS */
