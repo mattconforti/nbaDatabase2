@@ -25,7 +25,7 @@
     <div id="copyright_section">
         <!-- &#169; - copyright logo. dont have an actual copyright yet so dont wanna commit fraud. NOT SELLING THIS APP.
         EDUCATIONAL PURPOSES ONLY! -->
-        <h3 id="copyright_def">Matthew Conforti 2020</h3>
+        <h3 id="copyright_def">Matthew Conforti 2022</h3>
     </div>
     <a id="top_anchor" href="#top">back to top</a>
 </footer>
