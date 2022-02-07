@@ -89,27 +89,23 @@ hr {
     width: 30%;
     height: 200px;
     margin: 0 auto;
-    border: 2px solid red;
 }
 
 #search_div {
     width: 100%;
     height: 200px;
-    padding-left: 20%;
     /* FIX HORIZONTAL ALIGNMENT OF STUFF ON HOME PAGE. NO GUESS & CHECK. CALCULATIONS. */
     /* MAKE SURE EVERYTHING STAYS ALIGNED WHILE RESIZING.
-       HAVE TO BRUSH UP ON HOW TO DO THIS MORE EFFECTIVELY */
+       HAVE TO BRUSH UP ON HOW TO DO THIS MORE EFFECTIVELY - media queries and viewport units are the answer. along with flexbox etc*/
     margin: 0 auto;
     /* perfectly horizontally aligned?? NOT REALLY NEED TO MOVE LEFT A FEW PIXELS. ESPECIALLY FIX
        ALIGNMENT WHILE RESIZING!!!! BC OF PERCENTAGES??? NEED MORE CONSISTENT UNITS!!
     */
-    border: 2px solid red;
 }
 
 #player_input {
     font-size: 1.125em;
     padding-left: 3px;
-    border: 2px solid red;
 }
 
 #search_button {
@@ -386,6 +382,13 @@ h3 {
     /* resize & align & space index.php */
     #search_div_container {
         margin-left: 0px;
+        width: 100vw;
+    }
+    #search_div {
+        margin-left: 0vw;
+    }
+    #player_input {
+        margin-left: 7vw;
     }
 }
 /* IN HEADER BOTTOM MARGIN TO HR NEEDS TO BE SMALLER. DIDNT EFFECT PAGE RIGHT BY ALTERING THIS */
