@@ -314,13 +314,30 @@ function updateSeasonsGrid(amt_of_seasons, opened_window) {
     // ON THE PLAYER PAGE!!!!!
 }
 
+// used in search button click. returns true or false if the input is valid or not. HOW IS THIS NORMALLY DONE WITH FORMS? IM DOING IT MY
+// OWN WAY NOW BUT I WILL RESEARCH HOW INPUT VALIDATION IS NORMALLY DONE IN JS AND ALSO IF USING HTML FORM ATTRIBUTES & FUNCTIONS ETC
+// WOULD BE A BETTER OPTION. see https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation & other research threads about this topic.
+// client vs server side validation! thru js or built in html form validation? built in validation better performance but less customization than JS validation
+// which can be from your own code or thru a JS library! MY STUFF NEEDS TO BE WRAPPED IN FORM ELEMENTS IF WE ARE DOIN THAT! could change css slightly cuz of preset margins etc!
+// prolly gunna do this & then if its good u can use css valid & invalid pseudo class to make the styles for red & green border and or error message etc!
+// NEED MORE READING/RESEARCH ABOUT FORMS TO SEE WHERE THEY SUBMIT TO / ARE BEING SENT TO! ETC! 
+
 // ****************************************************************************************************************
 // *************************************  SEARCH BUTTON CLICK  ****************************************************
 // ****************************************************************************************************************
 search_button.addEventListener('click', () => {
     var player_name = input_field.value;
-    // DO INPUT VALIDATION HERE... OR WHEN USER CLICKS OUT OF INPUT FIELD?? STRAT? when user clicks out of input. (blur)
-    console.log(`Search Term: ${player_name}`);
+    // DO INPUT VALIDATION HERE... OR WHEN USER CLICKS OUT OF INPUT FIELD?? STRAT? CAN TRY BOTH. Like giving them the opportunity
+    // to hit search before i tell them that their input is wrong. that way it doesnt happen after every character or accidental click
+    // out or too pre-emptively like some search boxes u see online giving u suggestions and corrections before you even type the full phrase or get it correct
+    // yourself ex. if user makes a typo that they know is wrong and then click out and click back in its kinda annoying for the program
+    // to tell them they are wrong when they may be aware of the mistake. wait till they actually click search to check input (ie here)
+    console.log(`User Input: ${player_name}`);
+
+    // clean/validate input - goal is to make sure 2 words 3 in some odd cases. dont worry about caps thats done programatically. 
+    // no special characters? what about if they have a tilde over the e. idk. cover. also karl anthony towns how does he exist in the db? hyphen? caldwell pope?
+        // chkUsrIn();
+
 
     // CIRCLE LOADER BEFORE API CALL for UX - lets them know something computational
     // & time consuming is being done
@@ -333,6 +350,8 @@ search_button.addEventListener('click', () => {
     setTimeout(() => {
         // API call & all display work
         getPlayer(player_name);
+        // NEED SOME TYPE OF RETURN VALUE MAYBE THAT SAYS IF PLAYER IS IN THE DB OR NOT. ex. random 2 word name would result in 
+        // nothing happening. We want a little error red border and or error message in this case.
 
         // the work is done, hide the loading indicator
         c_loader.style.visibility = "hidden";

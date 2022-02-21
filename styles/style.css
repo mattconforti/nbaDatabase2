@@ -390,6 +390,9 @@ h3 {
     #player_input {
         margin-left: 7vw;
     }
+    #loader_wrapper {
+        left: 40vw;
+    }
 }
 /* IN HEADER BOTTOM MARGIN TO HR NEEDS TO BE SMALLER. DIDNT EFFECT PAGE RIGHT BY ALTERING THIS */
 
