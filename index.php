@@ -3,7 +3,7 @@
 -->
 
 <!-- DERRICK ROSE PRESENTS A BUG WHERE THERE IS 2020-2021 STATS IN 2 diff rows!!! DUPLICATE DATA! CHECK ACTUAL API RESULTS.
-OR DOING SOMETHING FUNNY IN MY JS CODE IF THERE ARE 2 ROWS
+OR DOING SOMETHING FUNNY IN MY JS CODE IF THERE ARE 2 ROWS. ITS PROBABLY BC 2 DIFF TEAMS! PUT TEAM NAMES IN ROWS & WILL FIX THAT
 -->
 
 <!DOCTYPE html>
@@ -14,7 +14,12 @@ OR DOING SOMETHING FUNNY IN MY JS CODE IF THERE ARE 2 ROWS
         <meta name="keywords" content="NBA,Basketball,Database,Sports">
         <meta name="author" content="Matt Conforti">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>NBA Database - Home</title>
+        <title>NBA Database - Player Search</title>
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/nbaDatabase/images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/nbaDatabase/images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/nbaDatabase/images/favicon/favicon-16x16.png">
+        <!---->
         <!-- Google Font API -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
