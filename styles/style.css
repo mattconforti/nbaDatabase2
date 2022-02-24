@@ -388,6 +388,8 @@ h3 {
         margin-left: 0vw;
     }
     #player_input {
+        margin-top: 10vw;
+        /* NEEDS TO BE CALCULATED NOT ARBITRARY #. PUT ON SERVER & TEST ON MOBILE. */
         margin-left: 7vw;
     }
     #loader_wrapper {
