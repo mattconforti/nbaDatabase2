@@ -35,7 +35,7 @@
                         <div class="nested_subgrid_item">
                             <h3 id="player_name_heading" class="player_info"></h3>
                         </div>
-                        <div class="nested_subgrid_item">
+                        <div id="player_jersey_item" class="nested_subgrid_item">
                             <h3 id="jersey_num_heading" class="player_info"></h3>
                             <!-- should these be h2 for size / importance heirarchy sake? but needs to be styled correctly -->
                         </div>
