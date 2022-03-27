@@ -388,12 +388,53 @@ h3 {
         margin-left: 0vw;
     }
     #player_input {
-        margin-top: 10vw;
+        margin-top: 10vh;
         /* NEEDS TO BE CALCULATED NOT ARBITRARY #. PUT ON SERVER & TEST ON MOBILE. */
         margin-left: 7vw;
     }
     #loader_wrapper {
         left: 40vw;
+    }
+    /* resize & align & space player_page.php */
+    #grid_container {
+        grid-template-columns: auto;
+        grid-template-rows: 500px 250px 150px;
+    }
+
+    #player_item {
+        width: 100vw;
+        margin-top: 5px;
+        height: 100vh;
+        /* NEED TO REDEFINE GRID TO GET THE HEIGHT TO WORK. MAIN GRIDCONTAINER!! */
+        /* NOW I KNOW TO DO MOBILE FIRST DEVELOPMENT! CUZ I HAD TO DEVELOP THE AESTHETICS TWICE! */
+    }
+
+    #subgrid_container {
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: repeat(3, 300px);
+        /* align perfectly ^^ */
+        border: 2px solid red;
+        margin-left: 0;
+        justify-items: center;
+    }
+
+    #team_info {
+        display: none;
+        /* DONT NEED TO DISPLAY THIS RIGHT HERE IN THIS VERSION!! ON MOBILE NEEDS TO BE SMALLER/MOVED!! */
+    }
+
+    #player_photo {
+        border: 2px solid red;
+    }
+
+    #player_name_item {
+        margin-top: 0;
+        border: 2px solid red;
+    }
+
+    #player_jersey_item {
+        border: 2px solid red;
     }
 }
 /* IN HEADER BOTTOM MARGIN TO HR NEEDS TO BE SMALLER. DIDNT EFFECT PAGE RIGHT BY ALTERING THIS */
