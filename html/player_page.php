@@ -19,7 +19,7 @@
             // include the header
             include('../includes/header.php');
         ?>
-        <hr>
+        <hr id="pp_header_hr">
         <!-- MAIN grid here -->
         <div id="grid_container"> <!-- FIX COLUMNS IN CSS TO BE EXACTLY 50/50 aligned underneat the player image!! -->
             <div id="player_item" class="grid_item">
