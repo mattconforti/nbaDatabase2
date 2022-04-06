@@ -20,7 +20,7 @@
             include('../includes/header.php');
         ?>
         <hr>
-        <!-- grid here -->
+        <!-- MAIN grid here -->
         <div id="grid_container"> <!-- FIX COLUMNS IN CSS TO BE EXACTLY 50/50 aligned underneat the player image!! -->
             <div id="player_item" class="grid_item">
                 <div id="subgrid_container">
@@ -31,8 +31,9 @@
                     <div id="player_photo_item" class="subgrid_item">
                         <img id="player_photo" src="" alt="player headshot">
                     </div>
+                    <!-- GAP EXISTS HERE. WHY? SO FRUSTRATING CANT FIND IT WTF! need to set all default margins to 0 next time -->
                     <div id="player_name_item" class="subgrid_item">
-                        <div class="nested_subgrid_item">
+                        <div id="player_name_heading_container" class="nested_subgrid_item">
                             <h3 id="player_name_heading" class="player_info"></h3>
                         </div>
                         <div id="player_jersey_item" class="nested_subgrid_item">
@@ -42,6 +43,7 @@
                     </div>
                 </div>
             </div>
+            <!-- need better names so u can differentiate between which level of grid you are in. outermost or inner etc! -->
             <div id="player_info_item" class="grid_item">
                 <h2>Player Info</h2>
                 <hr class="stats_dividers">

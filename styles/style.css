@@ -399,6 +399,8 @@ h3 {
     #grid_container {
         grid-template-columns: auto;
         grid-template-rows: 500px 250px 150px;
+        /* GRID GAP FOR DESKTOP SITE NOT NEEDED NOW! CREATES TOO MUCH EXTRA SPACE! */
+        gap: 0;
     }
 
     #player_item {
@@ -417,6 +419,8 @@ h3 {
         border: 2px solid red;
         margin-left: 0;
         justify-items: center;
+        /* TRYING TO RID OF EXTRA SPACE. IS THIS THE PLACE WHERE THE GAP EXISTS?? */
+        gap: 0;
     }
 
     #team_info {
@@ -424,17 +428,27 @@ h3 {
         /* DONT NEED TO DISPLAY THIS RIGHT HERE IN THIS VERSION!! ON MOBILE NEEDS TO BE SMALLER/MOVED!! */
     }
 
-    #player_photo {
-        border: 2px solid red;
+    #player_photo_item {
+        height: 218px;
+        /* CONVERT TO VIEWPORT UNITS!!!!! */
     }
 
     #player_name_item {
-        margin-top: 0;
-        border: 2px solid red;
+        margin-top: -70px; /* FIXES GAP BTW PLAYER PHOTO & PLAYER NAME. WHY DOES THIS EXIST? FIX CAUSE INSTEAD OF RIGGING SOLUTION! */
+    }
+
+    /* NEEDA RENAME ALL THIS BETTER NAMING CONVENTIONS FOR PARENTS & CHILDREN. NAMING SO YOU CAN SEE HEIRARCHY OF ELEMS BETTER!! */
+    #player_name_heading_container {
+        margin-top: -30px; /* WHY NEGATIVE PIXELS???? MARGIN 0 STILL HAS A GAP. WHY? DEFAULT MARGINS EXIST..! */
+        height: 40px; /* NEEDA CONVERT EVERYTHING TO VIEWPORT UNITS FOR BETTER RESIZING */
+    }
+
+    #player_name_heading {
+        margin-top: 0px;
     }
 
     #player_jersey_item {
-        border: 2px solid red;
+        margin-top: -35px;
     }
 }
 /* IN HEADER BOTTOM MARGIN TO HR NEEDS TO BE SMALLER. DIDNT EFFECT PAGE RIGHT BY ALTERING THIS */
