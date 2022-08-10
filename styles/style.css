@@ -1,3 +1,4 @@
+/* --- START OF INDEX.PHP STYLING --------- */
 h1 {
     float: left;
     width: 350px;
@@ -143,172 +144,12 @@ hr {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+/* --- END OF INDEX.PHP STYLING ------------------------------------------------------------------------ */
 
-#grid_container {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: 250px 250px 150px;
-    padding: 10px;
-    gap: 20px;
-}
 
-.grid_item {
-    border: 2px solid black;
-}
 
-#player_item {
-    grid-column-start: span 2;
-    background-color: lightgray;
-}
-
-#subgrid_container {
-    display: grid;
-    grid-template-columns: repeat(3, 300px);
-    grid-template-rows: 300px;
-    margin-left: 15%;
-    /* align perfectly ^^ */
-}
-
-#player_name_item {
-    display: grid;
-    grid-template-columns: 300px;
-    grid-template-rows: 50px 75px;
-    justify-items: center;
-    align-content: center;
-    height: 250px;
-    /* fix margin left??? doesnt align with the other items in the grid?? */
-}
-
-.player_info {
-    font-size: 1.75em;
-    font-family: 'Orbitron', monospace;
-    /* FIX HORIXONTAL SPACING RELATIVE TO LABELS */
-    /* use consistent units throughout this project - max of like 3 maybe?? idk */
-    /* MESS WITH SIZING & SPACING OF EVERYTHING!!! MAKE IMAGES & FONTS BIGGER & 
-       THINGS SPACED OUT NICELY!
-    */
-    font-style: italic;
-}
-
-#jersey_num_heading {
-    font-family: 'Graduate', monospace;
-    /* different font??!!??! */
-    font-size: 2.5em;
-    font-style: initial;
-    /* MOVE THIS DOWN A BIT?? TOO CLOSE TO NAME ON PLAYER PAGE */
-}
-
-#team_logo {
-    width: 250px;
-    height: 250px;
-}
-
-#player_photo {
-    width: 300px;
-    height: 218px;
-    /* MAKE EVERYTHING BIGGER? INCLUDING FONTS ETC! */
-}
-
-#player_info_item {
-    text-align: center;
-    margin-top: 40px;
-    background-color: lightgray;
-    /* make this items width exactly half the page so the horizontal grid gap under the player image aligns horizontally */
-}
-
-#info_subgrid {
-    display: grid;
-    grid-template-columns: 100px 100px 100px 100px 100px 100px;
-    grid-template-rows: 35px 35px 35px;
-    row-gap: 15px;
-    /* bigger font for items */
-}
-
-.player_info_label {
-    font-family: Helvetica, sans-serif;
-}
-
-.player_info_heading {
-    font-family: 'Graduate', monospace;
-}
-
-#season_stats {
-    grid-row-start: span 2;
-    text-align: center;
-    margin-top: 40px;
-    background-color: lightgray;
-    /* make these gray areas have box-shadows?? floating above the page. */
-    /* CENTER THIS GRID & CAREER STATS GRID OR (MORE LIKELY) ADD ANOTHER COLUMN TO IMPROVE SPACING & LAYOUT */
-}
-
-.season_num_label {
-    font-family: initial;
-}
-
-.season_stat {
-    font-family: 'Orbitron', monospace;
-}
-
-#career_stats {
-    text-align: center;
-    background-color: lightgray;
-    margin-top: 20px;
-}
-
-#career_accolades {
-    text-align: center;
-    background-color: lightgray;
-}
-
-h2 {
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 0px;
-}
-
-.stats_dividers {
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-
-#accolades_divider {
-    margin-bottom: 0px;
-}
-
-#subgrid_container2 {
-    display: grid;
-    grid-template-columns: 90px 75px 75px 75px 75px 75px 75px;
-    grid-template-rows: 35px;
-    /* however many seasons player played determines # of rows - min 2 */
-    margin-top: 0px;
-}
-
-.subgrid2_item {
-    border: 1px solid black;
-}
-
-h3 {
-    margin-top: 6px;
-    /* STILL HAVE TO CLEAN UP CENTERING & SPACING & SIZING & FONTS/AESTHETICS ETC */
-}
-
-.career_stat {
-    font-family: 'Orbitron', monospace;
-}
-
-#mvp_awards {
-    margin-top: 5px;
-}
-
-#subgrid3 {
-    display: grid;
-    grid-template-columns: 90px 75px 75px 75px 75px 75px 75px;
-    grid-template-rows: 35px 35px;
-}
-
-.subgrid3_item {
-    border: 1px solid black;
-}
+/* --- START OF PLAYER_PAGE !!! ------------------------------------------------------------------------ */
+/* --- END OF PLAYER PAGE STYLING ------------------------------------------------------------------------------------ */
 
 #cs1 {
     float: none;
@@ -346,15 +187,192 @@ h3 {
 put all that code inside a thing for my laptop screen size & above. see if ur supposed to do that for every screen size or just have
 a default code & then do the media queries based on that. or just have all css in media queries.!
 
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+/* 'BREAKPOINT' for my macbook air 13.3" viewport 1280x800 */
+@media (min-width: 800px) and (max-width: 1400px) {  /* BIG ENOUGH SIZE? WHAT ABOUT MY DESKTOP.? DIFF CSS NEEDED FOR THAT BIG? */
+    #grid_container {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: 250px 250px 150px;
+        padding: 10px;
+        gap: 20px;
+    }
+    
+    .grid_item {
+        border: 2px solid black;
+    }
+    
+    #player_item {
+        grid-column-start: span 2;
+        background-color: lightgray;
+    }
+    
+    #subgrid_container {
+        display: grid;
+        grid-template-columns: repeat(3, 300px);
+        grid-template-rows: 300px;
+        margin-left: 15%;
+        /* align perfectly ^^ */
+    }
+    
+    #player_name_item {
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 50px 75px;
+        justify-items: center;
+        align-content: center;
+        height: 250px;
+        /* fix margin left??? doesnt align with the other items in the grid?? */
+    }
+    
+    .player_info {
+        font-size: 1.75em;
+        font-family: 'Orbitron', monospace;
+        /* FIX HORIXONTAL SPACING RELATIVE TO LABELS */
+        /* use consistent units throughout this project - max of like 3 maybe?? idk */
+        /* MESS WITH SIZING & SPACING OF EVERYTHING!!! MAKE IMAGES & FONTS BIGGER & 
+           THINGS SPACED OUT NICELY!
+        */
+        font-style: italic;
+    }
+    
+    #jersey_num_heading {
+        font-family: 'Graduate', monospace;
+        /* different font??!!??! */
+        font-size: 2.5em;
+        font-style: initial;
+        /* MOVE THIS DOWN A BIT?? TOO CLOSE TO NAME ON PLAYER PAGE */
+    }
+    
+    #team_logo {
+        width: 250px;
+        height: 250px;
+    }
+    
+    #player_photo {
+        width: 300px;
+        height: 218px;
+        /* MAKE EVERYTHING BIGGER? INCLUDING FONTS ETC! */
+    }
+    
+    #player_info_item {
+        text-align: center;
+        margin-top: 40px;
+        background-color: lightgray;
+        /* make this items width exactly half the page so the horizontal grid gap under the player image aligns horizontally */
+    }
+    
+    #info_subgrid {
+        display: grid;
+        grid-template-columns: 100px 100px 100px 100px 100px 100px;
+        grid-template-rows: 35px 35px 35px;
+        row-gap: 15px;
+        /* bigger font for items */
+    }
+    
+    .player_info_label {
+        font-family: Helvetica, sans-serif;
+    }
+    
+    .player_info_heading {
+        font-family: 'Graduate', monospace;
+    }
+    
+    #season_stats {
+        grid-row-start: span 2;
+        text-align: center;
+        margin-top: 40px;
+        background-color: lightgray;
+        /* make these gray areas have box-shadows?? floating above the page. */
+        /* CENTER THIS GRID & CAREER STATS GRID OR (MORE LIKELY) ADD ANOTHER COLUMN TO IMPROVE SPACING & LAYOUT */
+    }
+    
+    .season_num_label {
+        font-family: initial;
+    }
+    
+    .season_stat {
+        font-family: 'Orbitron', monospace;
+    }
+    
+    #career_stats {
+        text-align: center;
+        background-color: lightgray;
+        margin-top: 20px;
+    }
+    
+    #career_accolades {
+        text-align: center;
+        background-color: lightgray;
+    }
+    
+    h2 {
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 0px;
+    }
+    
+    .stats_dividers {
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+    
+    #accolades_divider {
+        margin-bottom: 0px;
+    }
+    
+    #subgrid_container2 {
+        display: grid;
+        grid-template-columns: 90px 75px 75px 75px 75px 75px 75px;
+        grid-template-rows: 35px;
+        /* however many seasons player played determines # of rows - min 2 */
+        margin-top: 0px;
+    }
+    
+    .subgrid2_item {
+        border: 1px solid black;
+    }
+    
+    h3 {
+        margin-top: 6px;
+        /* STILL HAVE TO CLEAN UP CENTERING & SPACING & SIZING & FONTS/AESTHETICS ETC */
+    }
+    
+    .career_stat {
+        font-family: 'Orbitron', monospace;
+    }
+    
+    #mvp_awards {
+        margin-top: 5px;
+    }
+    
+    #subgrid3 {
+        display: grid;
+        grid-template-columns: 90px 75px 75px 75px 75px 75px 75px;
+        grid-template-rows: 35px 35px;
+    }
+    
+    .subgrid3_item {
+        border: 1px solid black;
+    }
+}
+/* --- END OF BREAKPOINT FOR 1000px (laptop size specifically testing on macbook air 13.3" ---------------------------------------- */
+
+/* ur mom -Addison :D */
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
 /* 'BREAKPOINT' for smartphones, iphone. IN REALITY NEED "MOBILE FIRST" DESIGN. 
     DESIGN 4 SMALLER SCREENS FIRST. WORK UR WAY UP VIEWPORT SIZES & NOTE WHERE LAYOUT FAILS & WRITE MEDIA QUERY FOR THAT.
     REPEAT UNTIL NEXT BREAKPOINT. USE RESPONSIVEPX.COM TO FIND NATURAL BREAKPOINTS. READ MORE ABOUT THIS.
     https://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile
     2nd answer ^^ review all answers but i think 2nd answer is a good summation of all & a good general method
 */
-
-/*WHY DOES MY PAGE ON MOBILE ALLOW U TO GO RIGHT MORE THAN THE PAGE WIDTH IS????*/
-@media (min-width:320px) {
+/*WHY DOES MY PAGE ON MOBILE ALLOW U TO GO RIGHT MORE THAN THE PAGE WIDTH IS???? - its bc overflow rn and too wide design for mobile */
+/* IPHONE 12 PRO MAX VIEWPORT IS 428 x 926 !!!!!!!!!!!!!!!! - GET BETTER THINGS FOR THE BREAKPOINT SIZES. USE GENERAL SIZES. SEE MODEL. */
+/* USE MIN WIDTH OR MAX WIDTH? OR JUST USE *AND* SO THAT U CAN TARGET SPECIFIC SCREEN SIZE RANGES EX BTW 300 and 500 px! SO THEY DONT OVERLAP! */
+@media (min-width: 320px) and (max-width: 480px) { /* UPDATE TO BE SPECIFIC SCREEN WIDTH USING AND. EX. BTW iphone smaller size & up to my size screen USE AND!!!! */
+/* - see https://www.emailonacid.com/blog/article/email-development/emailology_media_queries_demystified_min-width_and_max-width/#:~:text=Max%2Dwidth%20and%20min%2Dwidth,specific%20devices%20with%20known%20widths.
+*/
     #cs1 {
         margin-top: 3vh;
         margin-left: 7vw; 
@@ -416,24 +434,29 @@ a default code & then do the media queries based on that. or just have all css i
     }
 
     #player_item {
-        width: 100vw;
+        width: auto;
         margin-top: 5px;
         height: 100vh;
         /* NOW I KNOW TO DO MOBILE FIRST DEVELOPMENT! CUZ I HAD TO DEVELOP THE AESTHETICS TWICE! */
+        border: 2px solid yellow;
     }
 
     #subgrid_container {
         display: grid;
-        grid-template-columns: 100vw;
+        grid-template-columns: auto;
         grid-template-rows: repeat(3, 300px);
         /* align perfectly ^^ */
-        border: 2px solid red;
+        border: 2px solid green;
         margin: 0; /* CHANGING THE MARGINS DOES NOT FUCKING WORK THERE IS STILL DEFAULT MARGINS IT DOESNT MAKE ANY SENSE! */
         /* SET MARGINS ON BODY TO ZERO & DO PRELIM BODY CSS NEXT TIME LOOK UP WHAT PEOPLE DO NORMALLY IVE DONE IT BEFORE!!!
         FUCK DEFAULT MARGINS I SWEAR!! */
         justify-items: center;
         /* TRYING TO RID OF EXTRA SPACE. IS THIS THE PLACE WHERE THE GAP EXISTS?? */
         gap: 0;
+    }
+
+    .subgrid_item {
+        border: 2px solid rebeccapurple;
     }
 
     #team_info {
@@ -444,6 +467,13 @@ a default code & then do the media queries based on that. or just have all css i
     #player_photo_item {
         height: 218px;
         /* CONVERT TO VIEWPORT UNITS!!!!! */
+    }
+
+    #player_photo {
+        width: 270px;
+        height: 196px;
+        /* MAKE EVERYTHING BIGGER? INCLUDING FONTS ETC! */
+        /* SWITCH THIS TO VIEWPORT UNITS POR FAVOR. */
     }
 
     #player_name_item {
@@ -458,10 +488,17 @@ a default code & then do the media queries based on that. or just have all css i
 
     #player_name_heading {
         margin-top: 0px;
+        font-size: 2.5em;
     }
 
     #player_jersey_item {
         margin-top: -35px;
+    }
+
+    #jersey_num_heading {
+        font-family: 'Graduate', monospace;
+        font-size: 4.5em;
+        font-style: initial;
     }
 }
 /* IN HEADER BOTTOM MARGIN TO HR NEEDS TO BE SMALLER. DIDNT EFFECT PAGE RIGHT BY ALTERING THIS */
